@@ -1,0 +1,91 @@
+\documentclass{article}
+
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\title{Project Proposal: Implementing Graph Attention Networks}
+\author{Valle, Ruy\\
+\texttt{rrv4@illinois.edu}
+\and
+Soni, Kushagra\\
+\texttt{soni14@illinois.edu}
+}
+\date{\today}
+
+\begin{document}
+    \maketitle
+
+    \onehalfspacing
+
+
+    \section{Introduction}\label{sec:introduction}
+
+    Protein interactions play a crucial role in various biological processes, such as signal transduction,
+    metabolism, and immune response.
+    Identifying protein interactions can provide valuable insights into these processes, and can also lead to the discovery of new drug targets.
+    However, experimental methods for identifying protein interactions are often time-consuming and expensive.
+    In recent years, there has been increasing interest in using machine learning methods to predict protein interactions from protein sequences and structures.
+    In this project, we propose to implement Graph Attention Networks (GAT) for predicting protein interactions.
+    We will try to replicate the results which were received by the original authors of Graph Attention Networks \cite{velickovic2018graph}
+
+
+    \section{Objectives}\label{sec:objectives}
+
+    The main objective of this project is to develop a machine learning model that can accurately predict protein interactions.
+    Specifically, we aim to achieve the following objectives:
+
+    \begin{itemize}
+        \item Develop a GAT model that can take protein sequences and structures as input and predict protein interactions.
+        \item Evaluate the performance of the GAT model on benchmark datasets for protein interaction prediction.
+        \item Compare the performance of the GAT model with other state-of-the-art machine learning models for protein interaction prediction.
+    \end{itemize}
+
+
+    \section{Methodology}\label{sec:methodology}
+
+    The GAT model will be implemented using Python and the PyTorch deep learning library.
+    The input to the model will be a graph where nodes represent amino acids and edges represent physical interactions between the amino acids.
+    The graph will be constructed from the protein sequence and structure using established methods.
+    The GAT model will use attention mechanisms to weight the importance of neighboring nodes when aggregating information for each node.
+    The model will be trained using cross-entropy loss and optimized using the Adam optimizer.
+
+
+    \section{Evaluation}\label{sec:evaluation}
+
+    The performance of the GAT model will be evaluated on benchmark datasets for protein interaction prediction~\cite{zitnik2017predicting},
+    such as the Protein-Protein Interaction Extraction (PPI) dataset that consists of graphs corresponding to different human tissues.
+    The dataset contains 20 graphs for training, 2 for validation and 2 for testing.
+    To construct the graphs, we will use the preprocessed data provided by ~\cite{hamilton2017inductive}.
+    The evaluation metrics will include precision, recall and F1-score.
+    The performance of the GAT model will be compared with other state-of-the-art machine learning models for protein interaction prediction,
+    such as the Graph Convolutional Networks (GCN)~\cite{kipf2016semi} and the Deep Graph Infomax (DGI)~\cite{velickovic2018deep}.
+
+
+    \section{Timeline}\label{sec:timeline}
+
+    \begin{itemize}
+        \item Week 1-2: Literature review and data collection
+        \item Week 3-4: Graph construction and feature extraction
+        \item Week 5-7: GAT model implementation and optimization
+        \item Week 8-9: Model evaluation and comparison with other models
+        \item Week 10-11: Results analysis and report writing
+        \item Week 12: Final presentation and submission
+    \end{itemize}
+
+
+    \section{Conclusion}\label{sec:conclusion}
+
+    The successful implementation of the GAT model for predicting protein interactions will have important implications for the field of computational biology.
+    The model could be used to predict protein interactions for new proteins and provide valuable insights into biological processes.
+    The proposed project will also provide valuable experience in implementing deep learning models for graph-structured data.
+
+
+    \bibliographystyle{unsrt} %Reference style.
+    \bibliography{../bib/references}
+
+\end{document}
+

@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: project_proposal.aux
+The style file: unsrt.bst
+Database file #1: /Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_Project_GAT/docs/bib/references.bib
+You've used 5 entries,
+            1791 wiz_defined-function locations,
+            469 strings with 4622 characters,
+and the built_in function-call counts, 1101 in all, are:
+= -- 72
+> -- 70
+< -- 0
++ -- 25
+- -- 20
+* -- 66
+:= -- 184
+add.period$ -- 15
+call.type$ -- 5
+change.case$ -- 5
+chr.to.int$ -- 0
+cite$ -- 5
+duplicate$ -- 57
+empty$ -- 124
+format.name$ -- 20
+if$ -- 244
+int.to.chr$ -- 0
+int.to.str$ -- 5
+missing$ -- 5
+newline$ -- 28
+num.names$ -- 5
+pop$ -- 29
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 16
+stack$ -- 0
+substring$ -- 25
+swap$ -- 9
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 7
+width$ -- 6
+write$ -- 53
