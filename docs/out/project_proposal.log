@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.19)  19 MAR 2023 17:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.19)  19 MAR 2023 17:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -133,8 +133,8 @@ File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count272
 \l__pdf_internal_box=\box54
 )
-(/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_Pro
-ject_GAT/docs/out/project_proposal.aux)
+(/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT
+_Implementation/docs/out/project_proposal.aux)
 \openout1 = `project_proposal.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -188,30 +188,30 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-(/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_Pro
-ject_GAT/docs/out/project_proposal.bbl) [3]
-(/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_Pro
-ject_GAT/docs/out/project_proposal.aux) ) 
+(/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT
+_Implementation/docs/out/project_proposal.bbl) [3]
+(/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT
+_Implementation/docs/out/project_proposal.aux) ) 
 Here is how much of TeX's memory you used:
- 2643 strings out of 478268
- 40054 string characters out of 5846347
- 329067 words of memory out of 5000000
- 20840 multiletter control sequences out of 15000+600000
+ 2642 strings out of 478268
+ 40097 string characters out of 5846347
+ 329064 words of memory out of 5000000
+ 20839 multiletter control sequences out of 15000+600000
  475658 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,6n,62p,247b,261s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fo
-nts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/
-public/cm-super/sfrm1000.pfb>
+ 55i,6n,62p,233b,261s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-
+dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/font
+s/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2022/texmf-dist/fonts
+/type1/public/cm-super/sfrm1000.pfb>
 Output written on /Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Proj
-ect/CS598_DLH_Project_GAT/docs/out/project_proposal.pdf (3 pages, 95003 bytes).
-
+ect/CS598_DLH_GAT_Implementation/docs/out/project_proposal.pdf (3 pages, 94884 
+bytes).
 PDF statistics:
  50 PDF objects out of 1000 (max. 8388607)
  30 compressed objects within 1 object stream

@@ -24,10 +24,4 @@ Thomas~N. Kipf and Max Welling.
 \newblock Semi-supervised classification with graph convolutional networks.
 \newblock In {\em International Conference on Learning Representations}, 2017.
 
-\bibitem{velickovic2018deep}
-Petar Veli{\v{c}}kovi{\'c}, Guillem Cucurull, Arantxa Casanova, Adriana Romero,
-  Pietro Lio, and Yoshua Bengio.
-\newblock Deep graph infomax.
-\newblock In {\em International Conference on Learning Representations}, 2019.
-
 \end{thebibliography}
