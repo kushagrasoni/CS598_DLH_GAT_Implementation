@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.19)  25 MAR 2023 19:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.19)  25 MAR 2023 19:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -471,8 +471,17 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 
+32.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 32.
 
-Overfull \vbox (10.64857pt too high) detected at line 32
+
+LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 32.
+
+
+Overfull \vbox (6.14833pt too high) detected at line 32
  []
 
 (./background-and-problem-statement.tex)
@@ -496,15 +505,18 @@ _Implementation/proposal/project_proposal.bbl) [2
 ]
 (/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT
 _Implementation/proposal/project_proposal.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
 Package rerunfilecheck Info: File `project_proposal.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  )
 (\end occurred when \ifx on line 11 was incomplete) 
 Here is how much of TeX's memory you used:
- 13761 strings out of 478268
- 220903 string characters out of 5846347
- 564356 words of memory out of 5000000
- 31699 multiletter control sequences out of 15000+600000
+ 13773 strings out of 478268
+ 221075 string characters out of 5846347
+ 563325 words of memory out of 5000000
+ 31709 multiletter control sequences out of 15000+600000
  481053 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,13n,77p,1013b,481s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -513,16 +525,17 @@ mf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2022/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2022/texmf-dist/fo
-nts/type1/public/cm-super/sfrm1000.pfb>
+t/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2022/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2022/texmf-dist/fon
+ts/type1/public/cm-super/sfrm1000.pfb>
 Output written on /Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Proj
-ect/CS598_DLH_GAT_Implementation/proposal/project_proposal.pdf (2 pages, 98395 
-bytes).
+ect/CS598_DLH_GAT_Implementation/proposal/project_proposal.pdf (2 pages, 106231
+ bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 75 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
  12 named destinations out of 1000 (max. 500000)
  24065 words of extra memory for PDF output out of 24883 (max. 10000000)
 
