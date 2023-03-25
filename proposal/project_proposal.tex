@@ -1,0 +1,88 @@
+\documentclass{article}
+
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{microtype}
+\usepackage[hyperref]{proposal}
+\renewcommand{\UrlFont}{\ttfamily\small}
+
+\aclfinalcopy
+
+
+\newcommand\BibTeX{B\textsc{ib}\TeX}
+
+\title{Project Proposal: Implementing Graph Attention Networks}
+
+\author{Valle, Ruy \\
+    \texttt{rrv4@illinois.edu}
+    \\ and
+    Soni, Kushagra \\
+    \texttt{soni14@illinois.edu}
+    \\[2em]
+    Group ID: 179\\
+    Paper ID: 7\\
+    Presentation link: \url{https://www.youtube.com} \\
+    Code link: \url{https://github.com/kushagrasoni/CS598_DLH_GAT_Implementation}}
+
+\begin{document}
+    \maketitle
+
+    \section{Introduction}\label{sec:introduction}
+
+    Graph Attention Networks (GATs)~\cite{velickovic2018graph} are a type of neural network architecture designed for
+    processing graph-structured data.
+    They aim to overcome the limitations of previous architectures by being able to operate on arbitrarily structured graphs in a parallelizable manner.
+    GATs use a masked shared self-attention mechanism to assign weights to each node's neighbors and combine their features, resulting in a new set of features for the node in question.
+    GATs have shown promising results in various graph-based tasks, including node classification and link prediction.
+
+
+    \section{Background and Problem Statement}\label{sec:background-and-problem-statement}
+    \input{background-and-problem-statement}
+
+    \section{Objectives}\label{sec:objectives}
+    Our goal is to reproduce the results reported in the original paper, which used the Cora, Citeseer, Pubmed, and Protein-protein interaction datasets.
+    We will use the same architectural details as in the paper, aiming for
+    \begin{itemize}
+        \item Classification accuracies of approximately 83.0\%, 72.5\%, and 79\% in the Cora, Citeseer, and Pubmed
+        datasets, respectively,
+        \item Micro-averaged F1 score of approximately 0.973 in the protein-protein interaction dataset.
+    \end{itemize}
+
+    In all four cases, the results found were as good or better as the results found in previous studies.
+    We aim to test the hypothesis that we will also get better results than previous studies and the hypothesis will
+    be similar to those in the paper.
+    Furthermore, we aim to conduct a few ablation studies and architectural
+    variations, such as:
+    \begin{itemize}
+        \item Replacing the self-attention mechanism with other metrics, such as
+    constants, random weights, and Pearson and Spearman correlation
+    coefficients.
+        \item Replacing the shared weight matrix W with the encoding phase of an
+    autoencoder, by first training an autoencoder on the data.
+    \end{itemize}
+
+    \section{Methodology}\label{sec:methodology}
+    We will use the publicly available data from the original paper and Google Colab for training and testing, which should provide sufficient computational resources given the relatively small dataset sizes (the largest being 15.5 MB when compressed).
+
+    To achieve our goals, we plan to modify the official GAT implementation~\cite{petarvgatgithub} to suit our needs and make it
+    possible to run the model variants described above.
+
+    Through this project, we hope to deepen our understanding of GATs and contribute to the ongoing research in this field.
+
+    \section{Expected Results and Outcomes}\label{sec:expected-results-and-outcomes}
+    We hypothesize that our results will be as good or better than those found in previous studies.
+
+    \section{Limitations and Challenges}\label{sec:limitations-and-challenges}
+    We would like to mention that most of the datasets used are quite small and that computational resources should
+    not be an issue.
+    We would also identify any potential limitations or challenges that may arise during the project
+
+    \bibliographystyle{unsrt} %Reference style.
+    \bibliography{references}
+
+\end{document}
+

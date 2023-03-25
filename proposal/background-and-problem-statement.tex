@@ -1,0 +1,25 @@
+Before Graph Attention Networks (GATs), several neural network architectures were proposed to process graph-structured data, including Graph Convolutional Networks (GCNs), GraphSAGE, and DeepWalk. However, these architectures had one or more of the following limitations:
+
+\begin{itemize}
+    \item Inability to operate on arbitrarily structured graphs: GCNs, for example, are limited to processing homogeneous graphs where all nodes have the same features.
+
+    \item Need to sample from input graphs: some architectures, like GraphSAGE, require sampling from input graphs to create mini-batches, which can lead to information loss.
+
+    \item Learning separate weight matrices for different node degrees: GCNs use different weight matrices for nodes with different degrees, making the model less scalable.
+
+    \item Inability to parallelize across nodes: traditional GCNs perform summation operations over a node's neighbors, which cannot be parallelized.
+\end{itemize}
+
+Overall, prior architectures faced difficulties in handling the complexity and heterogeneity of real-world graphs, which motivated the development of Graph Attention Networks.
+
+GATs aim to be able to operate on arbitrarily structured graphs in a manner
+that is parallelizable across nodes in the graph, thus having none of the
+limitations mentioned previously. GATs use a masked shared self-attention
+mechanism. The mask ensures that, for a given node, only features from
+first-degree neighbours are taken into consideration. The self-attention
+mechanism allows the model to assign arbitrary weights to each of a given
+node's neighbours, which then allows the neighbours' features to be
+combined, which results in a new set of features for the node in question.
+The paper only mentions using the resulting features for classification
+tasks, but it should also be possible to use these features for regression
+tasks.

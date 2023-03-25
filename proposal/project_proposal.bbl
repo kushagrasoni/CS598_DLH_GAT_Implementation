@@ -1,0 +1,15 @@
+\begin{thebibliography}{1}
+
+\bibitem{velickovic2018graph}
+Petar Veli{\v{c}}kovi{\'c}, Guillem Cucurull, Arantxa Casanova, Adriana Romero,
+  Pietro Li{\`o}, and Yoshua Bengio.
+\newblock Graph attention networks.
+\newblock In {\em International Conference on Learning Representations (ICLR)},
+  2018.
+
+\bibitem{petarvgatgithub}
+Guillem~Cucurull Petar~Veličković.
+\newblock Gat.
+\newblock \url{https://github.com/PetarV-/GAT}, 2018.
+
+\end{thebibliography}
