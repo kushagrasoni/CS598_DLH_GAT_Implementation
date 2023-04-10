@@ -1,0 +1,16 @@
+So far we have only been able to inaccurately replicate the paper's
+experiments: as mentioned earlier, the Pytorch Geometric GAT implementation is
+not flexible enough to do exactly what the paper does. Our preliminary results
+are encouraging however. Our test accuracy on the Pubmed data is essentially
+indistinguishable from the one reported in the paper, and the test accuracy on
+the Citeseer and Cora datasets are about 5% worse than the ones reported in
+paper.
+
+We see signs of overfitting in our experiments and believe that reducing the
+overfitting will improve our test accuracy further. Specifically, on the
+Citeseer, Cora and Pubmed datasets, the training accuracy reaches 100%. The
+paper implements an early stopping mechanism during training, presumably to
+avoid this exact problem. Unfortunately, there are no details about how the
+mechanism works; it is described in a single sentence. We will attempt to
+implement our own such mechanism and hope it will reduce overfitting and
+improve test accuracy.
