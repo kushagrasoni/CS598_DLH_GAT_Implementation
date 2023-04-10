@@ -2,7 +2,6 @@ import torch
 import torch.nn.functional as F
 from torch_geometric.datasets import Planetoid
 from torch_geometric.nn import GAT
-import sys
 
 for dataset in ['citeseer', 'cora', 'pubmed']:
     # Load Citeseer dataset
