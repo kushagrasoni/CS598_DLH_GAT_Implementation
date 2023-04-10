@@ -1,0 +1,51 @@
+
+In our reproducibility project, we used four citation network datasets: Cora, Citeseer, Pubmed, and Protein-Protein Interaction (PPI).
+The Cora, Citeseer and Pubmed datasets were originally introduced in~\cite{sen2008collective} and the PPI dataset was
+introduced in~\cite{hamilton2017inductive}.
+
+\subsubsection{Cora}
+The Cora dataset consists of 2,708 scientific publications classified into one of seven categories.
+The citations between publications form a graph, where each node represents a publication and each edge represents a citation.
+
+\subsubsection{Citeseer}
+The Citeseer dataset consists of 3,327 scientific publications classified into one of six categories.
+Similarly, the citations between publications form a graph.
+
+\subsubsection{Pubmed}
+The Pubmed dataset consists of 19,717 scientific publications from the PubMed database, where each publication is associated with one or more MeSH (Medical Subject Headings) terms.
+The graph is constructed using the citation links between publications and each node represents a publication.
+The task is to predict the MeSH terms associated with each publication.
+
+\subsubsection{PPI}
+The PPI dataset consists of 24 protein-protein interaction networks, where each network is represented by a graph with nodes corresponding to proteins and edges representing interactions between them.
+The task is to predict whether a pair of proteins interacts or not.
+
+For all datasets, we used the same pre-processing steps as mentioned in the original GAT paper.
+In particular, we normalized the feature vectors for each node and added self-loops to the adjacency matrix.
+We also split the datasets into training, validation, and test sets according to the same ratio as in the original paper.
+
+\begin{table}
+    \centering
+    \begin{tabular}{@{}cccc@{}}
+        \toprule
+        \textbf{Dataset} & \textbf{\# Nodes} & \textbf{\# Edges} & \textbf{\# Features} \\
+        \midrule
+        \ch{Cora} & 2,708 & 5,429 & 1,433 \\
+        \ch{Citeseer} & 3,327 & 4,732 & 3,703 \\
+        \ch{Pubmed} & 19,717 & 44,338 & 500 \\
+        \ch{PPI} & 56,944 & 818,716 & 50 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Dataset statistics after pre-processing.}
+    \label{tab:dataset_stats}
+
+\end{table}
+
+
+Table~\ref{tab:dataset_stats} summarizes the basic statistics of the four datasets after pre-processing.
+Note that the number of features is different for each dataset, as is the number of classes and the sparsity of the adjacency matrix.
+
+
+We used the same dataset splits and evaluation metrics as in the original paper.
+For all datasets, we used early stopping with a patience of 100 epochs on both the cross-entropy loss and the micro-F1 score on the validation set, as mentioned in the original paper.
+We also used dropout with a rate of 0.6 to prevent overfitting.

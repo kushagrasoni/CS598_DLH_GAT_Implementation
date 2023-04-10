@@ -7,7 +7,9 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{microtype}
-\usepackage[hyperref]{proposal}
+\usepackage[hyperref]{project}
+\usepackage{pythonhighlight}
+\usepackage{booktabs,chemformula}
 \renewcommand{\UrlFont}{\ttfamily\small}
 
 \aclfinalcopy
@@ -73,11 +75,21 @@
 
     Through this project, we hope to deepen our understanding of GATs and contribute to the ongoing research in this field.
 
+
+    \subsection{Model Description}\label{subsec:model-description}
+    \input{model-description}
+
+    \subsection{Model Implementation}\label{subsec:model-implementation}
+    \input{model-implementation}
+
     \subsection{Data Description}\label{subsec:data-description}
     \input{data-description}
 
     \subsection{Computational Requirements}\label{subsec:computational-requirements}
     \input{computational-requirements}
+
+    \section{Results}\label{sec:results}
+    \input{results}
 
     \section{Limitations and Challenges}\label{sec:limitations-and-challenges}
     We would like to mention that most of the datasets used are quite small and that computational resources should

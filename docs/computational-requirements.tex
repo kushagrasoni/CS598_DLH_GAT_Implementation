@@ -1,8 +1,9 @@
-To reproduce the results reported in the GAT paper, we implemented the GAT model using PyTorch version 1.9.0~\cite{paszke2019pytorch} on two platforms: a local system with an Intel Core i7-8700 CPU, 32GB RAM, and NVIDIA GeForce GTX 1080 Ti GPU; and Google Colab's free GPU instance with 12GB of RAM.
+To reproduce the results reported in the GAT paper, we implemented the GAT model using PyTorch version 1.9.0~\cite{paszke2019pytorch} on two platforms:
+a local system with an Intel Core i7-8700 CPU, 32GB RAM, and NVIDIA GeForce GTX 1080 Ti GPU; and Google Colab's free GPU instance with 12GB of RAM\@.
 
 On the local system, we installed PyTorch and all necessary dependencies using the pip package manager.
 At part of next stage of the project, we will try to use the NVIDIA CUDA Toolkit to enable GPU acceleration.
-Training the GAT model on the Cora and Citeseer datasets took approximately 2-3 seconds per epoch, depending on the
+Training the GAT model on the Cora and Citeseer datasets took approximately 2--3 seconds per epoch, depending on the
 batch size and learning rate used.
 
 On Google Colab, we used the provided Jupyter notebook environment, which includes PyTorch and all necessary dependencies pre-installed.
