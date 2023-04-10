@@ -1,0 +1,31 @@
+In this project, we aim to reproduce the results reported in the Graph Attention Networks (GAT) paper~\cite{velickovic2018graph}.
+The paper evaluates the performance of GAT on four benchmark datasets for node classification: Cora, Citeseer, Pubmed, and Protein-Protein Interaction (PPI).
+
+\subsubsection{Cora Dataset}\label{subsubsec:cora-dataset}
+
+The Cora dataset is a citation network consisting of 2,708 scientific publications, where each publication is classified into one of seven classes: Case-Based Reasoning (CBR), Genetic Algorithms (GA), Neural Networks (NN), Probabilistic Methods (PM), Reinforcement Learning (RL), Rule Learning (RL), and Theory (TH).
+The dataset includes a binary bag-of-words feature vector for each publication, representing the presence or absence of certain words in the document.
+The network is formed by connecting publications that have a common citation.
+
+Following the preprocessing steps described in the GAT paper, we use the same dataset split as provided by~\cite{sen2008collective}, which consists of 140 labeled nodes for training, 500 nodes for validation, and 1,000 nodes for testing.
+We also use the same feature vectors for each node and the same network structure.
+
+To represent the graph, we construct a sparse adjacency matrix $A$, where $A_{ij}=1$ if there is a citation from node $i$ to node $j$, and $A_{ij}=0$ otherwise.
+We also add self-loops to the adjacency matrix, i.e., $A_{ii}=1$ for all nodes $i$.
+We normalize the adjacency matrix by the degree matrix $D$, where $D_{ii}$ is the degree of node $i$, to obtain the normalized adjacency matrix $\tilde{A}=D^{-1/2}AD^{-1/2}$.
+We use the same preprocessed data as provided in the original GAT paper.
+
+To evaluate the performance of the GAT model on the Cora dataset, we use the same evaluation metrics as reported in the original paper.
+Specifically, we report the micro-F1 score on the test set, which measures the harmonic mean of precision and recall across all classes.
+We also report the training and validation loss during training, as well as the accuracy and micro-F1 score on the validation set, to monitor the model's performance during training.
+
+\subsubsection{Citeseer Dataset}\label{subsubsec:citeseer-dataset}
+
+The Citeseer dataset is a citation network consisting of 3,312 scientific publications, where each publication is classified into one of six classes: Agents, AI, DB, IR, ML, and HCI. The dataset includes a binary bag-of-words feature vector for each publication, representing the presence or absence of certain words in the document.
+The network is formed by connecting publications that have a common citation.
+
+Following the preprocessing steps described in the GAT paper, we use the same dataset split as provided by~\cite{sen2008collective}, which consists of 120 labeled nodes for training, 500 nodes for validation, and 1,000 nodes for testing.
+We also use the same feature vectors for each node and the same network structure.
+
+To represent the graph, we construct a sparse adjacency matrix $A$, where $A_{ij}=1$ if there is a citation from node $i$ to node $j$, and $A_{ij}=0$ otherwise.
+We also add self-loops to the adjacency matrix, i.e., $A_{ii}=1$
