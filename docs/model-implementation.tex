@@ -1,0 +1,53 @@
+There are a few different variants of the model used in the paper and
+therefore in our project.
+
+For starters, we tried using the GAT model that is bundled with Pytorch
+Geometric.
+It appears this implementation is not flexible enough to exactly
+follow what the paper did, but we tried to stay as close as possible, so we
+called it as follows:
+\begin{python}
+    model = GAT(
+    in\_channels=dataset.num\_features,
+    out\_channels=dataset.num\_classes,
+    hidden\_channels=8,
+    num\_layers=2,
+    heads=8,
+    dropout=0.6,
+    act='elu',
+    act\_first=True
+    )
+\end{python}
+
+The `hidden\_channels' parameter tells us that the data from each node in the
+input graph are projected to an 8-dimensional space via a linear
+transformation (a matrix multiplication).
+The `act' parameter tells us that
+the exponential linear unit is then applied to the transformed data.
+`heads' indicates that this is repeated 8 different times, once per ``attention head'',
+meaning there are 8 separate linear transformations from the original data's
+space to 8-dimensional space.
+`dropout' indicates that dropout is applied with
+parameter p = 0.6. Lastly, `num\_layers' indicates that what this paragraph
+describes is repeated twice, with the output of the first later being fed into
+the second layer.
+
+As mentioned, this does not quite follow the models as described in the paper,
+but this was a useful step for us to figure out how to feed the data into the
+model, and more generally how to set everything up.
+Pytorch Geometric implementation of graph attention networks does not allow, for instance, to
+specify a different activation function for each layer, which would be
+required to exactly follow the paper's methodology.
+
+We therefore aim to build our own graph attention network implementation using
+Pytorch Geometric GATConv class, which implements one layer of the GAT
+model.
+Using GATConv directly will allow us to specify different activation
+functions at each layer and other such details.
+
+We are also attempting to rewrite GAT from scratch, by simply following the
+mathematical description of the model from the paper.
+Unfortunately, our implementation will likely be a lot slower than any of the implementations
+available online, because we do not understand in what way the graph
+convolution operation (e.g.\ Pytorch Geometric GATConv) is equivalent to the
+mathematical formulae in the paper.

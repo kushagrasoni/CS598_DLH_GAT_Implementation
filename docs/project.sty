@@ -7,7 +7,7 @@
 
 % 2017: modified to support DOI links in bibliography.  Now uses
 % natbib package rather than defining citation commands in this file.
-% Use with proposal_natbib.bst bib style.  -- Dan Gildea
+% Use with project_natbib.bst bib style.  -- Dan Gildea
 
 % This is the LaTeX style for ACL 2016. It contains Margaret Mitchell's
 % line number adaptations (ported by Hai Zhao and Yannick Versley).
@@ -101,13 +101,12 @@
 \ProcessOptions\relax
 \ifacl@hyperref
 \RequirePackage{hyperref}
-\usepackage{xcolor}		% make links dark blue
 \definecolor{darkblue}{rgb}{0, 0, 0.5}
 \hypersetup{colorlinks=true,citecolor=darkblue, linkcolor=darkblue, urlcolor=darkblue}
 \else
 % This definition is used if the hyperref package is not loaded.
 % It provides a backup, no-op definiton of \href.
-% This is necessary because \href command is used in the proposal_natbib.bst file.
+% This is necessary because \href command is used in the project_natbib.bst file.
 \def\href#1#2{{#2}}
 % We still need to load xcolor in this case because the lighter line numbers require it. (SC/KG/WL)
 \usepackage{xcolor}
