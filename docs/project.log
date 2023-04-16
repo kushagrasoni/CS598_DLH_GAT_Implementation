@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.19)  9 APR 2023 23:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.19)  16 APR 2023 13:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -292,27 +292,38 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
 \Hy@SectionHShift=\skip53
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: pdftex.def on input line 227.
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
-Package xcolor Info: Model `RGB' extended on input line 1368.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
-)
-Package hyperref Info: Option `colorlinks' set `true' on input line 106.
+/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT_
+Implementation/docs/project.sty:104: Undefined control sequence.
+<recently read> \definecolor 
+                             
+l.104 \definecolor
+                  {darkblue}{rgb}{0, 0, 0.5}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
+
+/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT_
+Implementation/docs/project.sty:104: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.104 \definecolor{d
+                    arkblue}{rgb}{0, 0, 0.5}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Package hyperref Info: Option `colorlinks' set `true' on input line 105.
 Conference Style for ACL-IJCNLP 2021
 \titlebox=\skip54
+[1
+
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 \aclrulerbox=\box55
 \aclrulercount=\count285
 \aclruleroffset=\dimen155
@@ -323,6 +334,30 @@ Conference Style for ACL-IJCNLP 2021
 \cv@tot=\count287
 \cv@tmpc@=\count288
 \cv@tmpc=\count289
+
+/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT_
+Implementation/docs/project.sty:345: Undefined control sequence.
+l.345 \definecolor
+                  {gainsboro}{rgb}{0.8, 0.8, 0.8}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT_
+Implementation/docs/project.sty:345: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.345 \definecolor{g
+                    ainsboro}{rgb}{0.8, 0.8, 0.8}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2022/03/01 v3.6b Customizing captions (AR)
 
@@ -378,414 +413,28 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/booktabs/booktabs.sty
-Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen170
-\lightrulewidth=\dimen171
-\cmidrulewidth=\dimen172
-\belowrulesep=\dimen173
-\belowbottomsep=\dimen174
-\aboverulesep=\dimen175
-\abovetopsep=\dimen176
-\cmidrulesep=\dimen177
-\cmidrulekern=\dimen178
-\defaultaddspace=\dimen179
-\@cmidla=\count301
-\@cmidlb=\count302
-\@aboverulesep=\dimen180
-\@belowrulesep=\dimen181
-\@thisruleclass=\count303
-\@lastruleclass=\count304
-\@thisrulewidth=\dimen182
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/chemformula/chemformula.sty
-(/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-(/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
-x
-\pgfutil@everybye=\toks26
-\pgfutil@tempdima=\dimen183
-\pgfutil@tempdimb=\dimen184
 
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
-sts.tex))
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box59
-) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/pgf.revision.tex)
-Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
 ))
-Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
-Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks27
-\pgfkeys@temptoks=\toks28
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
-ode.tex
-\pgfkeys@tmptoks=\toks29
-))
-\pgf@x=\dimen185
-\pgf@y=\dimen186
-\pgf@xa=\dimen187
-\pgf@ya=\dimen188
-\pgf@xb=\dimen189
-\pgf@yb=\dimen190
-\pgf@xc=\dimen191
-\pgf@yc=\dimen192
-\pgf@xd=\dimen193
-\pgf@yd=\dimen194
-\w@pgf@writea=\write3
-\r@pgf@reada=\read2
-\c@pgf@counta=\count305
-\c@pgf@countb=\count306
-\c@pgf@countc=\count307
-\c@pgf@countd=\count308
-\t@pgf@toka=\toks30
-\t@pgf@tokb=\toks31
-\t@pgf@tokc=\toks32
-\pgf@sys@id@count=\count309
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
-File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
-)
-Driver file for pgf: pgfsys-pdftex.def
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
-ef
-File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
-df.def
-File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
-)))
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
-code.tex
-File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfsyssoftpath@smallbuffer@items=\count310
-\pgfsyssoftpath@bigbuffer@items=\count311
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
-code.tex
-File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-))
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
-Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen195
-\pgfmath@count=\count312
-\pgfmath@box=\box60
-\pgfmath@toks=\toks33
-\pgfmath@stack@operand=\toks34
-\pgfmath@stack@operation=\toks35
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
-tex
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
-.code.tex)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
-nometric.code.tex)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
-m.code.tex)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
-rison.code.tex)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
-code.tex)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
-.code.tex)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
-code.tex)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
-erarithmetics.code.tex)))
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count313
-)) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
-de.tex
-File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@picminx=\dimen196
-\pgf@picmaxx=\dimen197
-\pgf@picminy=\dimen198
-\pgf@picmaxy=\dimen199
-\pgf@pathminx=\dimen256
-\pgf@pathmaxx=\dimen257
-\pgf@pathminy=\dimen258
-\pgf@pathmaxy=\dimen259
-\pgf@xx=\dimen260
-\pgf@xy=\dimen261
-\pgf@yx=\dimen262
-\pgf@yy=\dimen263
-\pgf@zx=\dimen264
-\pgf@zy=\dimen265
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
-ruct.code.tex
-File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@path@lastx=\dimen266
-\pgf@path@lasty=\dimen267
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
-.code.tex
-File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@shorten@end@additional=\dimen268
-\pgf@shorten@start@additional=\dimen269
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
-de.tex
-File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfpic=\box61
-\pgf@hbox=\box62
-\pgf@layerbox@main=\box63
-\pgf@picture@serial@count=\count314
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
-ate.code.tex
-File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgflinewidth=\dimen270
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
-ations.code.tex
-File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@pt@x=\dimen271
-\pgf@pt@y=\dimen272
-\pgf@pt@temp=\dimen273
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
-e.tex
-File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
-ode.tex
-File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
-ssing.code.tex
-File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
-de.tex
-File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfarrowsep=\dimen274
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
-e.tex
-File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@max=\dimen275
-\pgf@sys@shading@range@num=\count315
-\pgf@shadingcount=\count316
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
-e.tex
-File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
-code.tex
-File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfexternal@startupbox=\box64
-))
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
-de.tex
-File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
-ncy.code.tex
-File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
-code.tex
-File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
-tex
-File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)))
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
-e.tex
-File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfnodeparttextbox=\box65
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
-tex
-File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
--0-65.sty
-Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@nodesepstart=\dimen276
-\pgf@nodesepend=\dimen277
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
--1-18.sty
-Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
-))
-(/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
-Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen278
-\pgffor@skip=\dimen279
-\pgffor@stack=\toks36
-\pgffor@toks=\toks37
-))
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
-e.tex
-Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
-dlers.code.tex
-File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@plot@mark@count=\count317
-\pgfplotmarksize=\dimen280
-)
-\tikz@lastx=\dimen281
-\tikz@lasty=\dimen282
-\tikz@lastxsaved=\dimen283
-\tikz@lastysaved=\dimen284
-\tikz@lastmovetox=\dimen285
-\tikz@lastmovetoy=\dimen286
-\tikzleveldistance=\dimen287
-\tikzsiblingdistance=\dimen288
-\tikz@figbox=\box66
-\tikz@figbox@bg=\box67
-\tikz@tempbox=\box68
-\tikz@tempbox@bg=\box69
-\tikztreelevel=\count318
-\tikznumberofchildren=\count319
-\tikznumberofcurrentchild=\count320
-\tikz@fig@count=\count321
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
-e.tex
-File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfmatrixcurrentrow=\count322
-\pgfmatrixcurrentcolumn=\count323
-\pgf@matrix@numberofcolumns=\count324
-)
-\tikz@expandcount=\count325
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)))
-(/usr/local/texlive/2022/texmf-dist/tex/latex/l3packages/xfrac/xfrac.sty
-(/usr/local/texlive/2022/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2022-02-24 L3 programming layer (loader) 
-
 (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count326
-\l__pdf_internal_box=\box70
-))
-(/usr/local/texlive/2022/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
-Package: l3keys2e 2022-01-12 LaTeX2e option processing using LaTeX3 keys
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/base/textcomp.sty
-Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-Package: xparse 2022-01-12 L3 Experimental document command parser
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.st
-y
-Package: xtemplate 2022-01-12 L3 Experimental prototype document functions
-\l__xtemplate_tmp_dim=\dimen289
-\l__xtemplate_tmp_int=\count327
-\l__xtemplate_tmp_muskip=\muskip18
-\l__xtemplate_tmp_skip=\skip57
-)
-Package: xfrac 2022-01-12 L3 Experimental split-level fractions
-\l__xfrac_slash_box=\box71
-\l__xfrac_tmp_box=\box72
-\l__xfrac_denominator_bot_sep_dim=\dimen290
-\l__xfrac_numerator_bot_sep_dim=\dimen291
-\l__xfrac_numerator_top_sep_dim=\dimen292
-\l__xfrac_slash_left_sep_dim=\dimen293
-\l__xfrac_slash_right_sep_dim=\dimen294
-\l__xfrac_slash_left_muskip=\muskip19
-\l__xfrac_slash_right_muskip=\muskip20
-
-Package xtemplate Info: Declaring object type 'xfrac' taking 3 argument(s) on
-(xtemplate)             line 80.
-
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/units/nicefrac.sty
-Package: nicefrac 1998/08/04 v0.9b Nice fractions
-\L@UnitsRaiseDisplaystyle=\skip58
-\L@UnitsRaiseTextstyle=\skip59
-\L@UnitsRaiseScriptstyle=\skip60
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
-))
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
-meta.code.tex
-File: pgflibraryarrows.meta.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfarrowinset=\dimen295
-\pgfarrowlength=\dimen296
-\pgfarrowwidth=\dimen297
-\pgfarrowlinewidth=\dimen298
-)
-Package: chemformula 2022/01/23 v4.17 typeset chemical compounds and reactions 
-(CN)
-\l__chemformula_tmpa_dim=\dimen299
-\l__chemformula_tmpb_dim=\dimen300
-\l__chemformula_tmpc_dim=\dimen301
-\l__chemformula_tmpa_int=\count328
-\l__chemformula_tmpb_int=\count329
-\l__chemformula_tmpc_int=\count330
-\l__chemformula_tmpa_box=\box73
-\l__chemformula_tmpb_box=\box74
-\l__chemformula_arrow_length_dim=\dimen302
-\l__chemformula_arrow_label_height_dim=\dimen303
-\l__chemformula_arrow_label_offset_dim=\dimen304
-\l__chemformula_arrow_minimum_length_dim=\dimen305
-\l__chemformula_arrow_shortage_dim=\dimen306
-\l__chemformula_arrow_offset_dim=\dimen307
-\l__chemformula_arrow_yshift_dim=\dimen308
-\l__chemformula_radical_radius_dim=\dimen309
-\l__chemformula_radical_hshift_dim=\dimen310
-\l__chemformula_radical_vshift_dim=\dimen311
-\l__chemformula_radical_space_dim=\dimen312
-\l__chemformula_arrow_head_dim=\dimen313
-\l__chemformula_name_dim=\dimen314
-\l__chemformula_adduct_space_dim=\dimen315
-\l__chemformula_charge_shift_dim=\dimen316
-\l__chemformula_subscript_shift_dim=\dimen317
-\l__chemformula_superscript_shift_dim=\dimen318
-\l__chemformula_subscript_dim=\dimen319
-\l__chemformula_superscript_dim=\dimen320
-\l__chemformula_bond_dim=\dimen321
-\l__chemformula_bond_space_dim=\dimen322
-\l__chemformula_elspec_pair_distance_dim=\dimen323
-\l__chemformula_elspec_pair_line_length_dim=\dimen324
-\l__chemformula_elspec_pair_width_dim=\dimen325
-\l__chemformula_kroegervink_positive_radius_dim=\dimen326
-\l__chemformula_kroegervink_positive_hshift_dim=\dimen327
-\l__chemformula_kroegervink_positive_vshift_dim=\dimen328
-\l__chemformula_kroegervink_positive_space_dim=\dimen329
-\l__chemformula_stoich_space_skip=\skip61
-\l__chemformula_math_space_skip=\skip62
-\l__chemformula_additions_symbol_space_skip=\skip63
-\l__chemformula_count_tokens_int=\count331
-\g__chemformula_lewis_int=\count332
-\l__chemformula_arrow_arg_i_box=\box75
-\l__chemformula_arrow_arg_ii_box=\box76
-\l__chemformula_superscript_box=\box77
-\l__chemformula_subscript_box=\box78
-\l__chemformula_plus_space_skip=\skip64
-\l__chemformula_minus_space_skip=\skip65
+\l__color_backend_stack_int=\count301
+\l__pdf_internal_box=\box59
 )
 (/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT
 _Implementation/docs/project.aux)
@@ -812,17 +461,17 @@ LaTeX Font Info:    ... okay on input line 32.
 
 (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count333
-\scratchdimen=\dimen330
-\scratchbox=\box79
-\nofMPsegments=\count334
-\nofMParguments=\count335
-\everyMPshowfont=\toks38
-\MPscratchCnt=\count336
-\MPscratchDim=\dimen331
-\MPnumerator=\count337
-\makeMPintoPDFobject=\count338
-\everyMPtoPDFconversion=\toks39
+\scratchcounter=\count302
+\scratchdimen=\dimen170
+\scratchbox=\box60
+\nofMPsegments=\count303
+\nofMParguments=\count304
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count305
+\MPscratchDim=\dimen171
+\MPnumerator=\count306
+\makeMPintoPDFobject=\count307
+\everyMPtoPDFconversion=\toks27
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -852,8 +501,8 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
+pdfTeX warning (font expansion): font should be expanded before its first use
 Package hyperref Info: Link coloring ON on input line 32.
-
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -864,7 +513,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count339
+\c@section@level=\count308
 )
 LaTeX Info: Redefining \ref on input line 32.
 LaTeX Info: Redefining \pageref on input line 32.
@@ -874,14 +523,24 @@ LaTeX Info: Redefining \nameref on input line 32.
 _Implementation/docs/project.out)
 (/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT
 _Implementation/docs/project.out)
-\@outlinefile=\write4
-\openout4 = `project.out'.
+\@outlinefile=\write3
+\openout3 = `project.out'.
 
  ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count340
+\c@lstlisting=\count309
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.33     \maketitle
+                    [1
+
+
+]
 LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
 
 
@@ -914,8 +573,37 @@ LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              for symbol `textbraceleft' on input line 33.
 
 
+/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT_
+Implementation/docs/project.tex:33: Package xcolor Error: Undefined color `dark
+blue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33     \maketitle
+                   
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
 Overfull \vbox (6.54839pt too high) detected at line 33
  []
+
+
+/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT_
+Implementation/docs/project.tex:37: Package xcolor Error: Undefined color `dark
+blue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 ...Networks (GATs)~\cite{velickovic2018graph}
+                                                   are a type of neural netw...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 (./background-and-problem-statement.tex)
 Underfull \hbox (badness 1990) in paragraph at lines 51--53
@@ -927,11 +615,24 @@ Underfull \hbox (badness 5274) in paragraph at lines 53--54
 \OT1/cmr/m/n/10 (+20) 0.973 in the protein-protein in-ter-ac-tion
  []
 
-[1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-
+[2
 
 ]
+
+/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT_
+Implementation/docs/project.tex:73: Package xcolor Error: Undefined color `dark
+blue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 ... GAT implementation~\cite{petarvgatgithub}
+                                                   to suit our needs and mak...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 (./model-description.tex) (./model-implementation.tex
 (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
@@ -958,10 +659,236 @@ Overfull \hbox (31.21585pt too wide) in paragraph at lines 12--13
 []  
  []
 
-) (./data-description.tex [2]) (./computational-requirements.tex)
-(./results.tex)
+) (./data-description.tex
+
+./data-description.tex:3: Package xcolor Error: Undefined color `darkblue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 ...ally introduced in~\cite{sen2008collective}
+                                                   and the PPI dataset was
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./data-description.tex:4: Package xcolor Error: Undefined color `darkblue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 introduced in~\cite{hamilton2017inductive}
+                                              .
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[3]
+./data-description.tex:30: Undefined control sequence.
+l.30         \toprule
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./data-description.tex:32: Undefined control sequence.
+<recently read> \midrule 
+                         
+l.32         \midrule
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./data-description.tex:33: Undefined control sequence.
+l.33         \ch
+                {Cora} & 2,708 & 5,429 & 1,433 \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./data-description.tex:34: Undefined control sequence.
+<recently read> \ch 
+                    
+l.34         \ch
+                {Citeseer} & 3,327 & 4,732 & 3,703 \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./data-description.tex:35: Undefined control sequence.
+<recently read> \ch 
+                    
+l.35         \ch
+                {Pubmed} & 19,717 & 44,338 & 500 \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./data-description.tex:36: Undefined control sequence.
+<recently read> \ch 
+                    
+l.36         \ch
+                {PPI} & 56,944 & 818,716 & 50 \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./data-description.tex:37: Undefined control sequence.
+<recently read> \bottomrule 
+                            
+l.37         \bottomrule
+                        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./data-description.tex:45: Package xcolor Error: Undefined color `darkblue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.45 Table~\ref{tab:dataset_stats}
+                                   summarizes the basic statistics of the fo...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+) (./computational-requirements.tex
+
+./computational-requirements.tex:1: Package xcolor Error: Undefined color `dark
+blue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 ...orch version 1.9.0~\cite{paszke2019pytorch}
+                                                   on two platforms:
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+) (./results.tex
+
+./results.tex:9: Package xcolor Error: Undefined color `darkblue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 Refer below Table~\ref{tab:results-table}
+                                             .
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./results.tex:13: Undefined control sequence.
+l.13         \toprule
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./results.tex:14: Undefined control sequence.
+l.14         \midrule
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./results.tex:16: Undefined control sequence.
+<recently read> \ch 
+                    
+l.16         \ch
+                {Cora}     & 200    & Accuracy   & 0.82  \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./results.tex:17: Undefined control sequence.
+<recently read> \ch 
+                    
+l.17         \ch
+                {Citeseer} & 200    & Accuracy   & 0.73  \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./results.tex:18: Undefined control sequence.
+<recently read> \ch 
+                    
+l.18         \ch
+                {Pubmed}   & 200    & Accuracy   & 0.79  \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./results.tex:19: Undefined control sequence.
+<recently read> \ch 
+                    
+l.19         \ch
+                {PPI}      & 200    & F1 Score   & 0.369 \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./results.tex:20: Undefined control sequence.
+<recently read> \bottomrule 
+                            
+l.20         \bottomrule
+                        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+) [4]
 (/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT
-_Implementation/docs/project.bbl [3]) [4
+_Implementation/docs/project.bbl
+
+/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT_
+Implementation/docs/project.bbl:13: Package xcolor Error: Undefined color `dark
+blue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...block \url{https://github.com/PetarV-/GAT}
+                                                  , 2018.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+) [5
 
 ]
 (/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT
@@ -974,13 +901,13 @@ Package rerunfilecheck Info: File `project.out' has not changed.
  )
 (\end occurred when \ifx on line 11 was incomplete) 
 Here is how much of TeX's memory you used:
- 27752 strings out of 478268
- 521713 string characters out of 5846347
- 1045635 words of memory out of 5000000
- 45342 multiletter control sequences out of 15000+600000
+ 15969 strings out of 478268
+ 250359 string characters out of 5846347
+ 808498 words of memory out of 5000000
+ 33805 multiletter control sequences out of 15000+600000
  483463 words of font info for 131 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,13n,94p,1004b,2009s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,13n,77p,1004b,2007s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/tex
 mf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf
@@ -993,10 +920,10 @@ onts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2022/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2022/texmf-dist/font
 s/type1/public/cm-super/sfrm1000.pfb>
 Output written on /Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Proj
-ect/CS598_DLH_GAT_Implementation/docs/project.pdf (4 pages, 139175 bytes).
+ect/CS598_DLH_GAT_Implementation/docs/project.pdf (6 pages, 140808 bytes).
 PDF statistics:
- 124 PDF objects out of 1000 (max. 8388607)
- 99 compressed objects within 1 object stream
- 37 named destinations out of 1000 (max. 500000)
- 28173 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 131 PDF objects out of 1000 (max. 8388607)
+ 103 compressed objects within 2 object streams
+ 39 named destinations out of 1000 (max. 500000)
+ 28161 words of extra memory for PDF output out of 29859 (max. 10000000)
 
