@@ -1,5 +1,4 @@
-
-In our reproducibility project, we used four citation network datasets: Cora, Citeseer, Pubmed, and Protein-Protein Interaction (PPI).
+We used the same datasets as in the GAT paper: Cora, Citeseer, Pubmed, and Protein-Protein Interaction (PPI).
 The Cora, Citeseer and Pubmed datasets were originally introduced in~\cite{sen2008collective} and the PPI dataset was
 introduced in~\cite{hamilton2017inductive}.
 
@@ -20,10 +19,6 @@ The task is to predict the MeSH terms associated with each publication.
 The PPI dataset consists of 24 protein-protein interaction networks, where each network is represented by a graph with nodes corresponding to proteins and edges representing interactions between them.
 The task is to predict whether a pair of proteins interacts or not.
 
-For all datasets, we used the same pre-processing steps as mentioned in the original GAT paper.
-In particular, we normalized the feature vectors for each node and added self-loops to the adjacency matrix.
-We also split the datasets into training, validation, and test sets according to the same ratio as in the original paper.
-
 \begin{table}
     \centering
     \begin{tabular}{@{}lllll@{}}
@@ -42,10 +37,9 @@ We also split the datasets into training, validation, and test sets according to
 \end{table}
 
 
-Table~\ref{tab:dataset_stats} summarizes the basic statistics of the four datasets after pre-processing.
+Table~\ref{tab:dataset_stats} summarizes the basic statistics of the four datasets.
 Note that the number of features is different for each dataset, as is the number of classes and the sparsity of the adjacency matrix.
 
 
 We used the same dataset splits and evaluation metrics as in the original paper.
-For all datasets, we used early stopping with a patience of 100 epochs on both the cross-entropy loss and the micro-F1 score on the validation set, as mentioned in the original paper.
 We also used dropout with a rate of 0.6 to prevent overfitting.

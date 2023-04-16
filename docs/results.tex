@@ -6,6 +6,12 @@ Our test accuracy on the Pubmed data is essentially
 indistinguishable from the one reported in the paper, and the test accuracy on
 the Citeseer and Cora datasets are about 5\% worse than the ones reported in
 paper.
+Training the model on the PPI data has proven to be significantly slower than on
+the other datasets. The results we are reporting here for the PPI dataset are
+therefore results on the training set. The model has run through 71 epochs and
+has achieved a micro-averaged F1 score of 0.374 on the training set. The results
+for the other datasets are accuracy scores on the test set after 200 epochs of
+training.
 Refer below Table~\ref{tab:results-table}.
 
 % Please add the following required packages to your document preamble:
@@ -19,7 +25,7 @@ Refer below Table~\ref{tab:results-table}.
         Cora             & 200             & Accuracy            & \textit{0.82}    \\
         Citeseer         & 200             & Accuracy            & \textit{0.73}    \\
         Pubmed           & 200             & Accuracy            & \textit{0.79}    \\
-        PPI              & 200             & F1 Score            & \textit{0.369}   \\
+        PPI              & 71             & F1 Score            & \textit{0.369}   \\
         \bottomrule
 
     \end{tabular}
