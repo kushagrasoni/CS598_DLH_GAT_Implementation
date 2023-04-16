@@ -1,5 +1,5 @@
 \documentclass{article}
-
+\usepackage{minted}
 \usepackage{setspace}
 \usepackage{graphicx}
 \usepackage{float}
@@ -17,7 +17,7 @@
 
 \newcommand\BibTeX{B\textsc{ib}\TeX}
 
-\title{Project Proposal: Reproduce and Experiment with Graph Attention Networks}
+\title{Reproduce and Experiment with Graph Attention Networks}
 
 \author
 {Valle-Mena, Ricardo Ruy and Soni, Kushagra \\
@@ -40,11 +40,12 @@
     GATs use a masked shared self-attention mechanism to assign weights to each node's neighbors and combine their features, resulting in a new set of features for the node in question.
     GATs have shown promising results in various graph-based tasks, including node classification and link prediction.
 
+    \section{Scope of Reproducibility}\label{sec:scope-of-reproducibility}
 
-    \section{Background and Problem Statement}\label{sec:background-and-problem-statement}
+    \subsection{Background and Problem Statement}\label{sec:background-and-problem-statement}
     \input{background-and-problem-statement}
 
-    \section{Objectives}\label{sec:objectives}
+    \subsection{Objectives}\label{sec:objectives}
     Our goal is to reproduce the results reported in the original paper, which used the Cora, Citeseer, Pubmed, and Protein-protein interaction datasets.
     We will use the same architectural details as in the paper, aiming for
     \begin{itemize}
@@ -79,11 +80,11 @@
     \subsection{Model Description}\label{subsec:model-description}
     \input{model-description}
 
-    \subsection{Model Implementation}\label{subsec:model-implementation}
-    \input{model-implementation}
-
     \subsection{Data Description}\label{subsec:data-description}
     \input{data-description}
+
+    \subsection{Model Implementation}\label{subsec:model-implementation}
+    \input{model-implementation}
 
     \subsection{Computational Requirements}\label{subsec:computational-requirements}
     \input{computational-requirements}

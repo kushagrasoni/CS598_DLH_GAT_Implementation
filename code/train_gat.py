@@ -37,7 +37,7 @@ for dataset in ['citeseer', 'cora', 'pubmed']:
         pred = model(dataset.x, dataset.edge_index).argmax(dim=1)
         correct = int(pred[dataset.train_mask].eq(dataset.y[dataset.train_mask]).sum().item())
         acc = correct / int(dataset.train_mask.sum())
-        print(f'Epoch {epoch + 1:03d}, Loss: {loss:.4f}, Test Acc: {acc:.4f}')
+        # print(f'Epoch {epoch + 1:03d}, Loss: {loss:.4f}, Test Acc: {acc:.4f}')
 
 
     # Test the model
@@ -45,42 +45,46 @@ for dataset in ['citeseer', 'cora', 'pubmed']:
     out = model(dataset.x, dataset.edge_index)
     pred = out.argmax(dim=1)
     acc = pred[dataset.test_mask].eq(dataset.y[dataset.test_mask]).sum().item() / int(dataset.test_mask.sum())
-    print(f'{dataset} Test Accuracy: {acc:.4f}')
+    print('\n\n*****************************************************************************************************\n')
+    print(f'                                         {dataset} ')
+    print(f'                                         Total Epochs: 200')
+    print(f'                                         Test Accuracy: {acc:.4f}')
+    print('\n*****************************************************************************************************\n\n')
 
-ppi_train = PPI('.')
-model = GAT(
-    in_channels=ppi_train.num_features,
-    out_channels=ppi_train.num_classes,
-    hidden_channels=8,
-    num_layers=2,
-    heads=8,
-    dropout=0.6,
-    act='elu',
-    act_first=True
-)
-
-optimizer = torch.optim.Adam(model.parameters(), lr=0.005, weight_decay=5e-4)
-
-# Train model
-for epoch in range(200):
-    print(epoch)
-    model.train()
-    optimizer.zero_grad()
-    out = model(ppi_train.x, ppi_train.edge_index)
-    loss = F.cross_entropy(out, ppi_train.y)
-    loss.backward()
-    optimizer.step()
-
-    # Evaluate model
-    model.eval()
-    pred = model(ppi_train.x, ppi_train.edge_index) > .5
-    f1 = sklearn.metrics.f1_score(ppi_train.y.detach().numpy(), pred.detach().numpy(), average='micro')
-    print(f'Epoch {epoch + 1:03d}, Loss: {loss:.4f}, F1: {f1}')
-
-
-# Test the model
-ppi_test = PPI('.', 'test')
-model.eval()
-out = model(ppi_test.x, ppi_test.edge_index) > .5
-f1 = sklearn.metrics.f1_score(ppi_test.y.detach().numpy(), out.detach().numpy(), average='micro')
-print(f'Test F1: {f1}')
+# ppi_train = PPI('.')
+# model = GAT(
+#     in_channels=ppi_train.num_features,
+#     out_channels=ppi_train.num_classes,
+#     hidden_channels=8,
+#     num_layers=2,
+#     heads=8,
+#     dropout=0.6,
+#     act='elu',
+#     act_first=True
+# )
+#
+# optimizer = torch.optim.Adam(model.parameters(), lr=0.005, weight_decay=5e-4)
+#
+# # Train model
+# for epoch in range(200):
+#     print(epoch)
+#     model.train()
+#     optimizer.zero_grad()
+#     out = model(ppi_train.x, ppi_train.edge_index)
+#     loss = F.cross_entropy(out, ppi_train.y)
+#     loss.backward()
+#     optimizer.step()
+#
+#     # Evaluate model
+#     model.eval()
+#     pred = model(ppi_train.x, ppi_train.edge_index) > .5
+#     f1 = sklearn.metrics.f1_score(ppi_train.y.detach().numpy(), pred.detach().numpy(), average='micro')
+#     print(f'Epoch {epoch + 1:03d}, Loss: {loss:.4f}, F1: {f1}')
+#
+#
+# # Test the model
+# ppi_test = PPI('.', 'test')
+# model.eval()
+# out = model(ppi_test.x, ppi_test.edge_index) > .5
+# f1 = sklearn.metrics.f1_score(ppi_test.y.detach().numpy(), out.detach().numpy(), average='micro')
+# print(f'Test F1: {f1}')
