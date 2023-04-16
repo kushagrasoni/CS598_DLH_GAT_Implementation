@@ -6,18 +6,22 @@ Geometric.
 It appears this implementation is not flexible enough to exactly
 follow what the paper did, but we tried to stay as close as possible, so we
 called it as follows:
-\begin{python}
-    model = GAT(
-    in\_channels=dataset.num\_features,
-    out\_channels=dataset.num\_classes,
-    hidden\_channels=8,
-    num\_layers=2,
+
+\begin{minted}{python}
+from torch_geometric.nn import GAT
+model = GAT(
+    in_channels=dataset.num_features,
+    out_channels=dataset.num_classes,
+    hidden_channels=8,
+    num_layers=2,
     heads=8,
     dropout=0.6,
     act='elu',
-    act\_first=True
+    act_first=True
     )
-\end{python}
+\end{minted}
+
+
 
 The `hidden\_channels' parameter tells us that the data from each node in the
 input graph are projected to an 8-dimensional space via a linear

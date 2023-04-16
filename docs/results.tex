@@ -8,18 +8,22 @@ the Citeseer and Cora datasets are about 5\% worse than the ones reported in
 paper.
 Refer below Table~\ref{tab:results-table}.
 
-\begin{table}
-    \begin{tabular}{llll}
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[]
+    \centering
+    \begin{tabular}{@{}llll@{}}
         \toprule
-        \midrule
         \textbf{Dataset} & \textbf{Epochs} & \textbf{Score Type} & \textbf{Results} \\
-        \ch{Cora}     & 200    & Accuracy   & 0.82  \\
-        \ch{Citeseer} & 200    & Accuracy   & 0.73  \\
-        \ch{Pubmed}   & 200    & Accuracy   & 0.79  \\
-        \ch{PPI}      & 200    & F1 Score   & 0.369 \\
+        \midrule
+        Cora             & 200             & Accuracy            & \textit{0.82}    \\
+        Citeseer         & 200             & Accuracy            & \textit{0.73}    \\
+        Pubmed           & 200             & Accuracy            & \textit{0.79}    \\
+        PPI              & 200             & F1 Score            & \textit{0.369}   \\
         \bottomrule
+
     \end{tabular}
-    \caption{Results using torch geometric's GAT library}
+    \caption{Results using torch geometric GAT library}
     \label{tab:results-table}
 \end{table}
 

@@ -12,12 +12,11 @@ Before Graph Attention Networks (GATs), several neural network architectures wer
 
 Overall, prior architectures faced difficulties in handling the complexity and heterogeneity of real-world graphs, which motivated the development of Graph Attention Networks.
 
-GATs aim to be able to operate on arbitrarily structured graphs in a manner
-that is parallelizable across nodes in the graph, thus having none of the
-limitations mentioned previously. GATs use a masked shared self-attention
-mechanism. The mask ensures that, for a given node, only features from
-first-degree neighbours are taken into consideration. The self-attention
-mechanism allows the model to assign arbitrary weights to each of a given
+GATs aim to be able to operate on arbitrarily structured graphs in a manner that is parallelizable across nodes in the graph, thus having none of the
+limitations mentioned previously.
+GATs use a masked shared self-attention mechanism.
+The mask ensures that, for a given node, only features from first-degree neighbours are taken into consideration.
+The self-attention mechanism allows the model to assign arbitrary weights to each of a given
 node's neighbours, which then allows the neighbours' features to be
 combined, which results in a new set of features for the node in question.
 The paper only mentions using the resulting features for classification
