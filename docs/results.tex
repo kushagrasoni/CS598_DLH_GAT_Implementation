@@ -1,31 +1,29 @@
 So far we have only been able to inaccurately replicate the paper's
 experiments: as mentioned earlier, the Pytorch Geometric GAT implementation is
 not flexible enough to do exactly what the paper does.
-Our preliminary results are encouraging however.
+However, our preliminary results are encouraging.
+
 Our test accuracy on the Pubmed data is essentially
 indistinguishable from the one reported in the paper, and the test accuracy on
 the Citeseer and Cora datasets are about 5\% worse than the ones reported in
 paper.
-Training the model on the PPI data has proven to be significantly slower than on
-the other datasets. The results we are reporting here for the PPI dataset are
-therefore results on the training set. The model has run through 71 epochs and
-has achieved a micro-averaged F1 score of 0.374 on the training set. The results
-for the other datasets are accuracy scores on the test set after 200 epochs of
-training.
+
+Training the model on the PPI data has proven to be significantly slower than on the other datasets.
+The results we are reporting here for the PPI dataset are therefore results on the training set.
+The model has run through 71 epochs and has achieved a micro-averaged F1 score of 0.374 on the training set.
+The results for the other datasets are accuracy scores on the test set after 200 epochs of training.
 Refer below Table~\ref{tab:results-table}.
 
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
-\begin{table}[]
+\begin{table}
     \centering
     \begin{tabular}{@{}llll@{}}
         \toprule
         \textbf{Dataset} & \textbf{Epochs} & \textbf{Score Type} & \textbf{Results} \\
         \midrule
-        Cora             & 200             & Accuracy            & \textit{0.82}    \\
-        Citeseer         & 200             & Accuracy            & \textit{0.73}    \\
-        Pubmed           & 200             & Accuracy            & \textit{0.79}    \\
-        PPI              & 71             & F1 Score            & \textit{0.369}   \\
+        Cora             & 200             & Accuracy            &      {0.82}    \\
+        Citeseer         & 200             & Accuracy            &      {0.73}    \\
+        Pubmed           & 200             & Accuracy            &      {0.79}    \\
+        PPI              & 71              & F1 Score            &      {0.374}   \\
         \bottomrule
 
     \end{tabular}
@@ -33,12 +31,8 @@ Refer below Table~\ref{tab:results-table}.
     \label{tab:results-table}
 \end{table}
 
-We see signs of overfitting in our experiments and believe that reducing the
-overfitting will improve our test accuracy further.
+We see signs of overfitting in our experiments and believe that reducing the overfitting will improve our test accuracy further.
 Specifically, on the Citeseer, Cora and Pubmed datasets, the training accuracy reaches 100\%.
-The paper implements an early stopping mechanism during training, presumably to
-avoid this exact problem.
-Unfortunately, there are no details about how the mechanism works;
-it is described in a single sentence.
-We will attempt to implement our own such mechanism and hope it will reduce overfitting and
-improve test accuracy.
+The paper implements an early stopping mechanism during training, presumably to avoid this exact problem.
+Unfortunately, there are no details about how the mechanism works; it is described in a single sentence.
+We will attempt to implement our own such mechanism and hope it will reduce overfitting and improve test accuracy.

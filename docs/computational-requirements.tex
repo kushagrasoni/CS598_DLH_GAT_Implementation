@@ -6,14 +6,16 @@ To reproduce the results reported in the GAT paper, we implemented the GAT model
 \end{itemize}
 
 On the local system, we installed PyTorch and all necessary dependencies using the pip package manager.
-At part of next stage of the project, we will try to use the NVIDIA CUDA Toolkit to enable GPU acceleration.
-Training the GAT model on the Cora and Citeseer datasets took approximately 2--3 seconds per epoch, depending on the
-batch size and learning rate used.
+At part of next stage of the project, we will try to use the CUDA Toolkit to enable GPU acceleration.
+Training and evaluating the GAT model on the Cora and Citeseer datasets took approximately 20-25 seconds per 200
+epochs, depending on the batch size and learning rate used.
 
-On Google Colab, we used the provided Jupyter notebook environment, which includes PyTorch and all necessary dependencies pre-installed.
-We also used Google's free GPU instance with 12GB of RAM, which allowed us to train the GAT model on larger datasets such as Pubmed and PPI.
-Training the GAT model on the Pubmed dataset took approximately TBU minutes per epoch, while training on the PPI
-dataset took approximately TBU per epoch.
+On Google Colab, we used the provided Jupyter notebook environment.
+We installed PyTorch and all necessary dependencies within the notebook.
+We also used Google's free Compute instance with around 12GB of RAM, which allowed us to train the GAT model on larger
+datasets such as Pubmed and PPI\@.
+Training the GAT model on the Pubmed dataset took approximately 20 seconds per 200 epochs, while training on the PPI
+dataset took approximately 30 minutes per epoch which is also not consistent due to large memory requirement.
 
 Overall, the computational requirements for reproducing the GAT results on a local system are moderate, but may require a GPU for faster training times.
 Google Colab provides a convenient and free platform for reproducing the results, but training times may be longer due to the limited RAM and shared GPU resources.

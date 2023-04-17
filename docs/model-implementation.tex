@@ -45,13 +45,10 @@ required to exactly follow the paper's methodology.
 
 We therefore aim to build our own graph attention network implementation using
 Pytorch Geometric GATConv class, which implements one layer of the GAT
-model.
-Using GATConv directly will allow us to specify different activation
-functions at each layer and other such details.
+model. Using GATConv directly will allow us to specify different activation functions at each layer and other such details.
 
 We are also attempting to rewrite GAT from scratch, by simply following the
 mathematical description of the model from the paper.
-Unfortunately, our implementation will likely be a lot slower than any of the implementations
-available online, because we do not understand in what way the graph
-convolution operation (e.g.\ Pytorch Geometric GATConv) is equivalent to the
-mathematical formulae in the paper.
+Unfortunately, our implementation will likely be a bit lot slower than any of the currently
+available implementations on the net as we are still trying to understand, how the graph convolution operation
+(e.g.\ Pytorch Geometric GATConv) is equivalent to the mathematical formulae in the paper.

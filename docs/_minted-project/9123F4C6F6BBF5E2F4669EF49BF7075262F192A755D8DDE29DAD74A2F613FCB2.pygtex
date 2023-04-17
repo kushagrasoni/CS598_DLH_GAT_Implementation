@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{torch\PYGZus{}geometric.nn} \PYG{k+kn}{import} \PYG{n}{GAT}
+\PYG{n}{model} \PYG{o}{=} \PYG{n}{GAT}\PYG{p}{(}
+    \PYG{n}{in\PYGZus{}channels}\PYG{o}{=}\PYG{n}{dataset}\PYG{o}{.}\PYG{n}{num\PYGZus{}features}\PYG{p}{,}
+    \PYG{n}{out\PYGZus{}channels}\PYG{o}{=}\PYG{n}{dataset}\PYG{o}{.}\PYG{n}{num\PYGZus{}classes}\PYG{p}{,}
+    \PYG{n}{hidden\PYGZus{}channels}\PYG{o}{=}\PYG{l+m+mi}{8}\PYG{p}{,}
+    \PYG{n}{num\PYGZus{}layers}\PYG{o}{=}\PYG{l+m+mi}{2}\PYG{p}{,}
+    \PYG{n}{heads}\PYG{o}{=}\PYG{l+m+mi}{8}\PYG{p}{,}
+    \PYG{n}{dropout}\PYG{o}{=}\PYG{l+m+mf}{0.6}\PYG{p}{,}
+    \PYG{n}{act}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}elu\PYGZsq{}}\PYG{p}{,}
+    \PYG{n}{act\PYGZus{}first}\PYG{o}{=}\PYG{k+kc}{True}
+\PYG{p}{)}
+\end{Verbatim}
