@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.19)  16 APR 2023 15:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.19)  16 APR 2023 16:12
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1037,6 +1037,10 @@ LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
 (Font)              for symbol `textbraceleft' on input line 33.
 
+
+Overfull \vbox (6.54839pt too high) detected at line 33
+ []
+
 (./background-and-problem-statement.tex)
 Underfull \hbox (badness 1990) in paragraph at lines 52--54
 []\OT1/cmr/m/n/10 (+20) Classification ac-cu-ra-cies of ap-prox-i-mately
@@ -1053,26 +1057,26 @@ Underfull \hbox (badness 5274) in paragraph at lines 54--55
 
 ]
 (./model-description.tex) (./data-description.tex
-Overfull \hbox (5.224pt too wide) in paragraph at lines 29--39
+Overfull \hbox (5.224pt too wide) in paragraph at lines 24--34
  [][] 
  []
 
-) (./model-implementation.tex [2]
+) (./model-implementation.tex
 \openout3 = `project.pyg'.
 
 
 (/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT
 _Implementation/docs/_minted-project/default.pygstyle)
 (/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT
-_Implementation/docs/_minted-project/E835E59F3E99EB4570A84245E108818D62F192A755
+_Implementation/docs/_minted-project/9123F4C6F6BBF5E2F4669EF49BF7075262F192A755
 D8DDE29DAD74A2F613FCB2.pygtex
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 2.
-)) (./computational-requirements.tex)
+ [2])) (./computational-requirements.tex)
 (./results.tex
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 13.
+               Default added (so using `tbp') on input line 19.
 
 ) [3]
 (/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT
@@ -1091,13 +1095,13 @@ runsystem(rm project.pyg)...executed.
  )
 (\end occurred when \ifx on line 11 was incomplete) 
 Here is how much of TeX's memory you used:
- 29905 strings out of 478268
- 579239 string characters out of 5846347
- 923517 words of memory out of 5000000
+ 29903 strings out of 478268
+ 579223 string characters out of 5846347
+ 924532 words of memory out of 5000000
  47445 multiletter control sequences out of 15000+600000
- 483463 words of font info for 131 fonts, out of 8000000 for 9000
+ 483412 words of font info for 130 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,13n,94p,1004b,497s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,94p,1004b,717s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/tex
 mf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf
@@ -1111,7 +1115,7 @@ nts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2022/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2022/texmf-dist/fonts
 /type1/public/cm-super/sfrm1000.pfb>
 Output written on /Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Proj
-ect/CS598_DLH_GAT_Implementation/docs/project.pdf (4 pages, 152738 bytes).
+ect/CS598_DLH_GAT_Implementation/docs/project.pdf (4 pages, 153315 bytes).
 PDF statistics:
  117 PDF objects out of 1000 (max. 8388607)
  90 compressed objects within 1 object stream
