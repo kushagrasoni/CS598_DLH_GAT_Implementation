@@ -1,39 +1,26 @@
+# Graph Attention Networks reproduction and experimentation
 
-# CS598 DLH - Project - Reproduce & Experiment Graph Attention Networks
+This repository attempts to reproduce the Graph Attention Networks (GAT) paper using Pytorch, and includes experiments using variations of the model architectures used in the GAT paper.
 
-## Checklist
+## Requirements
 
-1. [ ] architecture differences (different activation functions on different layers, etc.)
-   1. [ ] GATConv, highly optimized linear algebra, better performance
-   2. [ ] Pure Python, lot more code, more work
-2. [ ] dropout in the paper seems to be different from regular dropout
-3. [ ] early stopping
-4. [ ] PPI training seemed to have some specificities to it (something about using two graphs)
-5. [ ] L2 regularization
-6. [ ] ablation studies
-   1. [ ] Replacing the self-attention mechanism with other metrics, such as constants, random weights, and Pearson and Spearman correlation coefficients.
-   2. [ ] Replacing the shared weight matrix W with the encoding phase of an autoencoder, by first training an autoencoder on the data. 
-   3. [ ] Getting rid of the shared weight matrix W
-   4. [ ] Getting rid of the vector a^T
-7. [ ] avoid overfitting (might be addressed by early stopping)
-8. [ ] GPU enablement
+To install required Python librairies:
 
-
-##Things We tried but didn't work
-
-We tried to use the softmax function in below ways but that made the accuracy worst.
-
-```
-def forward(self, x, edge_index):
-x = self.act1(self.act2(self.conv1(x, edge_index)))
-x = self.act2(self.conv2(x, edge_index))
-return x
+```setup
+pip install -r requirements.txt
 ```
 
+## Running the code
 
-```
-def forward(self, x, edge_index):
-x = self.act1(F.softmax(self.conv1(x, edge_index), dim=1))
-x = self.act2(self.conv2(x, edge_index))
-return x
-```
+Once you've set up your environment, navigate to the folder where you cloned this repository, then into the "code" folder, then run `jupyter notebook`. Open the notebook of your choice and run all the cells.
+
+## Results
+
+Our model achieves the following performance :
+
+Test accuracies of 0.7800, 0.6720 and 0.8180 on the Cora, Citeseer and Pubmed datasets, respectively.
+
+## Contributing
+
+This repository was made as part of the CS598 Deep Learning for Healthcare class at UIUC in the winter 2023 semeseter. Contributions are not welcome.
+
