@@ -13,8 +13,7 @@ class GATHead(torch.nn.Module):
 
         self.conv1 = torch.nn.Conv1d(in_dim, out_dim, 1, bias=False)
         self.conv2 = torch.nn.Conv1d(out_dim, 1, 1)
-        self.conv3 = torch.nn.Conv1d(out_dim, 1, 1)
-        self.conv4 = torch.nn.Conv1d(in_dim, out_dim, 1)
+        self.conv3 = torch.nn.Conv1d(in_dim, out_dim, 1)
 
     def forward(self, data):
         if self.in_drop != 0.0:
@@ -23,9 +22,8 @@ class GATHead(torch.nn.Module):
         feats = self.conv1(data.permute(0, 2, 1))
 
         f_1 = self.conv2(feats)
-        f_2 = self.conv3(feats)
-        logits = f_1 + f_2.permute(0, 2, 1)
-        coefs = torch.nn.functional.softmax(torch.nn.functional.leaky_relu(logits.detach()) + self.bias1, dim=-1)
+        logits = f_1 + f_1.permute(0, 2, 1)
+        coefs = torch.nn.functional.softmax(torch.nn.functional.leaky_relu(logits) + self.bias1, dim=-1)
 
         if self.coef_drop != 0.0:
             coefs = torch.nn.functional.dropout(coefs, 1.0 - self.coef_drop)
@@ -37,7 +35,7 @@ class GATHead(torch.nn.Module):
 
         if self.residual:
             if data.shape[-1] != ret.shape[-1]:
-                ret = ret + self.conv4(data)
+                ret = ret + self.conv3(data)
             else:
                 ret = ret + data
 
@@ -64,7 +62,7 @@ class GAT(torch.nn.Module):
     def forward(self, x):
         x = torch.nn.functional.elu(self.conv1(x))
         x = self.conv2(x)
-        return torch.nn.functional.softmax(x, dim=1)
+        return torch.nn.functional.softmax(x, dim=-1)
 
 # Taken directly from https://github.com/PetarV-/GAT/blob/master/utils/process.py
 def adj_to_bias(adj, sizes, nhood=1):
