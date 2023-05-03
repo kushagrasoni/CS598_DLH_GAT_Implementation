@@ -6,11 +6,11 @@ wd = os.getcwd()
 
 os.chdir(wd)
 
-int_runs = [5, 10] #, 20, 30, 40, 50]
+int_runs = [50] #, 20, 30, 40, 50]
 
 datasets = ['cora'] #, 'citeseer', 'pubmed']
 
-gat_type = 'GATv2Conv'
+gat_type = ['GATv2Conv', 'GAT']
 
 # int_runs = [1, 2, 4]
 
