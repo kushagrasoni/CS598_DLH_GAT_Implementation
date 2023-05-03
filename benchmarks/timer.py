@@ -7,7 +7,7 @@ def timer(num_tests, uid, dataset, gat_type):
     accuracy = []
     num_tests = int(num_tests)
     for i in range(num_tests):
-        print(f"Iter {i}")
+        print(f"Iter {i+1}")
         # start_time = timeit.default_timer()
         # This is the where we call the target function
         acc = execute_gat_model()
@@ -15,15 +15,16 @@ def timer(num_tests, uid, dataset, gat_type):
         # t = (end_time - start_time)
         accuracy.append(acc)
 
-    d = np.array(accuracy)
+    data = np.array(accuracy)
+    data = data.astype(float)
     result = {
-        "mean": np.mean(d),
-        "min": np.min(d),
-        "q25": np.quantile(d, .25),
-        "median": np.quantile(d, .50),
-        "q75": np.quantile(d, .75),
-        "max": np.max(d),
-        "std": np.std(d),
+        "mean": np.mean(data),
+        "min": np.min(data),
+        "q25": round(np.quantile(data, .25), 4),
+        "median": round(np.quantile(data, .50), 4),
+        "q75": round(np.quantile(data, .75), 4),
+        "max": np.max(data),
+        "std": np.std(data),
         "num_tests": num_tests,
         "dataset": dataset,
         "gat_type": gat_type,
