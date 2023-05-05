@@ -1,14 +1,38 @@
+import os
+
 import torch_geometric
 import torch
 import torch.nn.functional as F
 from torch_geometric.datasets import Planetoid
+from torch_geometric.nn import GAT
 from datetime import datetime
 import numpy as np
+import random
 
-dataset_name = 'cora'
+def set_seed(seed):
+    """Set seed"""
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    os.environ["PYTHONHASHSEED"] = str(seed)
 
 
-class GATCora(torch.nn.Module):
+class CoraGATConv(torch.nn.Module):
+    def __init__(self, in_channels, n_classes):
+        super().__init__()
+        self.conv1 = torch_geometric.nn.GATConv(heads=8, out_channels=8, in_channels=in_channels)
+        self.act1 = torch.nn.ELU()
+        self.conv2 = torch_geometric.nn.GATConv(heads=1, out_channels=n_classes, in_channels=64)
+        self.act2 = torch.nn.Softmax(dim=1)
+
+    def forward(self, x, edge_index):
+        x = F.dropout(x, p=0.6, training=self.training)
+        x = self.act1(self.conv1(x, edge_index))
+        x = self.act2(self.conv2(x, edge_index))
+        return x
+    
+    
+class CoraGATV2Conv(torch.nn.Module):
     def __init__(self, in_channels, n_classes):
         super().__init__()
         self.conv1 = torch_geometric.nn.GATv2Conv(heads=8, out_channels=8, in_channels=in_channels)
@@ -23,11 +47,27 @@ class GATCora(torch.nn.Module):
         return x
 
 
-def execute_gat_model():
+def execute_gat_model(gat_type, dataset_name, seed):
+    set_seed(seed)
     start = datetime.now()
     dataset = Planetoid(root=f'../data/{dataset_name}', name=dataset_name)
     # Define model and optimizer
-    model = GATCora(dataset.num_features, dataset.num_classes)
+    if gat_type == 'GATConv':
+        model = CoraGATConv(dataset.num_features, dataset.num_classes)
+    elif gat_type == 'GATv2Conv':
+        model = CoraGATV2Conv(dataset.num_features, dataset.num_classes)
+    else:
+        model = GAT(
+            in_channels=dataset.num_features,
+            out_channels=dataset.num_classes,
+            hidden_channels=8,
+            num_layers=2,
+            heads=8,
+            dropout=0.6,
+            act='elu',
+            act_first=True
+        )
+        
     optimizer = torch.optim.Adam(model.parameters(), lr=0.005, weight_decay=5e-4)
 
     best_epoch = 0
@@ -73,6 +113,3 @@ def execute_gat_model():
     print('\n*****************************************************************************************************\n\n')
 
     return f'{acc: .4f}'
-
-
-execute_gat_model()

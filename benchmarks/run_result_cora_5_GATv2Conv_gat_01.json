@@ -1,1 +1,0 @@
-{"mean": 0.7884, "min": 0.779, "q25": 0.78, "median": 0.785, "q75": 0.797, "max": 0.801, "std": 0.008979977728257468, "num_tests": 5, "dataset": "cora", "gat_type": "GATv2Conv"}

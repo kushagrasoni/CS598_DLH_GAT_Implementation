@@ -22,10 +22,21 @@
 9. [ ] PPI dataset execution --> resource or system limitations, took really long time
 10. [ ] Presentation
 11. [ ] Benchmarking
-    1. [ ] Test Accuracy
+    1. [ ] Test Accuracy --> Histogram way
+       1. [ ] Histogram for different implementation per dataset
     2. [ ] F1 Score
     3. [ ] Training Loss and Accuracy
 12. [ ] Re-writing from scratch using pytorch
+
+## Priority
+1. Benchmarking
+2. Report / Presentation / Video
+3. Ablations
+4. Streamline Code repo
+5. Update ReadMe
+6. More ablations
+7. GPU enablement
+8. Anything Extra
 
 
 ##Things We tried but didn't work
