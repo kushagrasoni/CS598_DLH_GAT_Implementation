@@ -21,8 +21,6 @@ model = GAT(
 )
 \end{minted}
 
-
-
 The `hidden\_channels' parameter tells us that the data from each node in the
 input graph are projected to an 8-dimensional space via a linear
 transformation (a matrix multiplication).
@@ -43,12 +41,12 @@ Pytorch Geometric implementation of graph attention networks does not allow, for
 specify a different activation function for each layer, which would be
 required to exactly follow the paper's methodology.
 
-We therefore aim to build our own graph attention network implementation using
-Pytorch Geometric GATConv class, which implements one layer of the GAT
-model. Using GATConv directly will allow us to specify different activation functions at each layer and other such details.
-
-We are also attempting to rewrite GAT from scratch, by simply following the
-mathematical description of the model from the paper.
-Unfortunately, our implementation will likely be a bit lot slower than any of the currently
-available implementations on the net as we are still trying to understand, how the graph convolution operation
-(e.g.\ Pytorch Geometric GATConv) is equivalent to the mathematical formulae in the paper.
+We therefore built three different implementations of GAT, one using Pytorch
+Geometric's GATConv class, one using Pytorch Geometric's GATv2Conv class, and
+one using Pytorch primitives. This allowed us, to the best of our knowledge, to
+follow the paper's methodology exactly. We say "to the best of our knowledge"
+because parts of the methodology are not well explained in the paper, and the
+authors only published the code they used to run the model on Cora in addition
+to the model itself. There may therefore be details when running the model on
+the other three datasets where we deviate from the paper. We are confident,
+however, that any such deviations are small.

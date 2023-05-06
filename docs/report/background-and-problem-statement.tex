@@ -3,11 +3,11 @@ Before Graph Attention Networks (GATs), several neural network architectures wer
 \begin{itemize}
     \item Inability to operate on arbitrarily structured graphs: GCNs, for example, are limited to processing homogeneous graphs where all nodes have the same features.
 
-    \item Need to sample from input graphs: some architectures, like GraphSAGE, require sampling from input graphs to create mini-batches, which can lead to information loss.
+    \item Need to sample from input graphs: some architectures, like GraphSAGE, require sampling from input graphs, which leads to information loss.
 
-    \item Learning separate weight matrices for different node degrees: GCNs use different weight matrices for nodes with different degrees, making the model less scalable.
+    \item Learning separate weight matrices for different node degrees: GCNs use different weight matrices for nodes with different degrees.
 
-    \item Inability to parallelize across nodes: traditional GCNs perform summation operations over a node's neighbors, which cannot be parallelized.
+    \item Inability to parallelize training across nodes.
 \end{itemize}
 
 Overall, prior architectures faced difficulties in handling the complexity and heterogeneity of real-world graphs, which motivated the development of Graph Attention Networks.
