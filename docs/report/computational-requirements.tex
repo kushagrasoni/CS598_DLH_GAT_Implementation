@@ -8,11 +8,14 @@ On the local systems, we installed PyTorch and all necessary dependencies using
 the pip package manager. Training and evaluating the GAT model on the Cora and
 Citeseer datasets took approximately 20-25 seconds per 200 epochs. Training and
 evaluating the GAT model on the Pubmed dataset took approximately 2 and half
-minutes with 200 training epochs. Training and evaluating the GAT model on the
-PPI dataset took sufficiently long that we only ran it once to completion and
+minutes with 200 training epochs.
+
+We tried to run the PPI dataset on both the local machines mentioned earlier.
+The mac system errored out with ``no application memory available'', while training and evaluating the GAT
+model on the one dataset took sufficiently long that we only ran it once to completion and
 at this point had not yet implemented a timing mechanism in our code. The PPI
 training ran for approximately two entire work days, so roughly 16 hours.
 
 Overall, the computational requirements for reproducing the GAT results on a
-local system are moderate, but may require a GPU for faster training times,
+local system are high and may require a GPU for faster training times,
 which is especially important for the PPI dataset.
