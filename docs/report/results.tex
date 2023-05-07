@@ -1,25 +1,33 @@
-As part of the experimentation, we utilized 3 different open-source GAT model versions:
-\begin{itemize}
-    \item torch\_geometric.nn.GAT
-    \item torch\_geometric.nn.GATConv
-    \item torch\_geometric.nn.GATv2Conv
-\end{itemize}
+Our results can be broken up into three parts: first, replicating the paper's
+methodology and results, second, rewriting the GAT model using Pytorch
+primitives, and third, experimenting with variants of the architecture used in
+the paper.
 
-We were able to closely replicate the paper's
-experiments via 3 different: as mentioned earlier, the Pytorch Geometric GAT implementation is
-not flexible enough to do exactly what the paper does.
-However, our preliminary results are encouraging.
+We first attempted to replicate the paper's methodology and results as closely
+possible using the Pytorch Geometric library. We first used the GAT class they
+provide, but found it was not flexible enough to properly replicate the model
+architectures used in the paper. We then implemented two versions of GAT, using
+Pytorch Geometric's GATConv and GATv2Conv classes. The former is an
+implementation of a single GAT layer, and the latter is an implementation of
+a single layer from a subsequent paper (https://arxiv.org/abs/2105.14491),
+which claims to have made the attention mechanism more powerful.
 
-Our test accuracy on the Pubmed data is essentially
-indistinguishable from the one reported in the paper, and the test accuracy on
-the Citeseer and Cora datasets are about 5\% worse than the ones reported in
-paper.
+We ran all three of these models on the Cora, Citeseer and Pubmed datasets 50
+times. Each run consisted in 200 epochs of training. The results are shown in
+<TBU> REFERENCE TO BENCHMARKING IMAGE. As we can see, our Cora and Pubmed
+results are slightly worse than the Cora and Pubmed results from the paper. In
+the case of Pubmed, our results are quite a bit worse, with our best runs being
+a little bit worse than the average from the paper, and our worse results being
+a lot worse.
 
-Training the model on the PPI data has proven to be significantly slower than on the other datasets.
-The results we are reporting here for the PPI dataset are therefore results on the training set.
-The model has run through 71 epochs and has achieved a micro-averaged F1 score of 0.374 on the training set.
-The results for the other datasets are accuracy scores on the test set after 200 epochs of training.
-Refer below Table~\ref{tab:results-table}.
+Training the model on the PPI data has proven to be significantly slower than
+on the other datasets. We only ran the PPI data through the implementation
+using the Pytorch Geometric GAT class, and ended up discarding our results
+because the GAT class isn't flexible enough to accommodate the paper's
+architecture, and we figured we would get back to this, which we unfortunately
+didn't. The PPI data took roughly 16 hours to run on one of our machines and
+made the machine essentially unusable during those 16 hours, and ran out of
+memory when we tried to run it on another machine.
 
 \begin{table}
     \centering
@@ -44,8 +52,25 @@ Refer below Table~\ref{tab:results-table}.
     \label{tab:results-table}
 \end{table}
 
-We also implemented early stopping strategy which improved the test accuracy results to some extent.
+We also tried writing our own implementation of the GAT model using Pytorch
+primitives. The idea was to gain a deeper understanding of the model and to be
+able to experiment more flexibly with the model, since we can control
+everything in the model with an implementation written from scratch, whereas
+there are aspects of the model that we can't control when using Pytorch
+Geometric's classes.
 
-But, since the above GAT models libraries weren't able to replicate the results 100\% with those in the original paper,
-we tried to write our own GAT model implementation from scratch using torch.nn library.
-Unfortunately, this attempt couldn't go as planned as we
+Unfortunately, both our attempts are rewriting GAT using Pytorch failed. We
+first tried to translate the implementation written by the paper's authors
+(<TBU>Add reference to PetarV repo here) from Tensorflow to Pytorch, but its
+accuracy stopped increasing on the training data at roughly 50% accuracy. This
+is in stark contrast to the previously-discussed implementations which achieved
+well over 80% accuracy on the training data.
+
+We then used another Pytorch implementation we found online (<TBU>Add reference
+to GATLayerImp2 from pytorch-GAT repo here) as a reference for another Pytorch
+GAT implementation. Similarly to the previous attempt, training accuracy
+stopped increasing around 45% accuracy.
+
+Lastly, we ran the Cora, Citeseer and Pubmed datasets through three
+architectural variants of the model. In two cases, we wrote single-layer
+GAT implementations, and the other was a three-layer GAT implementation.
