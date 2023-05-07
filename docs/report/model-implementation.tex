@@ -1,7 +1,5 @@
-ADD LINK TO REPO
-
 For starters, we tried using the GAT model that is bundled with Pytorch
-Geometric.  It appears this implementation is not flexible enough to exactly
+Geometric. It appears this implementation is not flexible enough to exactly
 follow what the paper did, but we tried to stay as close as possible, so we
 called it as follows:
 
@@ -21,28 +19,30 @@ model = GAT(
 
 The `hidden\_channels' parameter tells us that the data from each node in the
 input graph are projected to an 8-dimensional space via a linear transformation
-(a matrix multiplication).  The `act' parameter tells us that the exponential
+(a matrix multiplication). The `act' parameter tells us that the exponential
 linear unit is then applied to the transformed data.  `heads' indicates that
 this is repeated 8 different times, once per ``attention head'', meaning there
 are 8 separate linear transformations from the original data's space to
-8-dimensional space.  `dropout' indicates that dropout is applied with
+8-dimensional space. `dropout' indicates that dropout is applied with
 parameter p = 0.6. Lastly, `num\_layers' indicates that what this paragraph
 describes is repeated twice, with the output of the first later being fed into
 the second layer.
 
 As mentioned, this does not quite follow the models as described in the paper,
 but this was a useful step for us to figure out how to feed the data into the
-model, and more generally how to set everything up. The Pytorch Geometric
-implementation of graph attention networks does not allow, for instance, to
+model, and more generally how to set everything up.
+The Pytorch Geometric implementation of graph attention networks does not allow, for instance, to
 specify a different activation function for each layer, which would be required
 to exactly follow the paper's methodology.
 
-We therefore built four different implementations of GAT, one using Pytorch
-Geometric's GATConv class, one using Pytorch Geometric's GATv2Conv class, and
-two using Pytorch primitives. This allowed us, to the best of our knowledge, to
-follow the paper's methodology exactly. We say "to the best of our knowledge"
-because parts of the methodology are not well explained in the paper, and the
+We therefore built four different implementations of GAT, \url{https://github
+.com/kushagrasoni/CS598_DLH_GAT_Implementation/code/GAT_Implementation_Notebook.ipynb}
+one using Pytorch Geometric's GATConv class, one using Pytorch Geometric's GATv2Conv class, and
+two using Pytorch primitives.
+This allowed us, to the best of our knowledge, to follow the paper's methodology exactly.
+
+We say ``to the best of our knowledge'' because parts of the methodology are not well explained in the paper, and the
 authors only published the code they used to run the model on Cora in addition
-to the model itself. There may therefore be details when running the model on
-the other three datasets where we deviate from the paper. We are confident,
-however, that any such deviations are small.
+to the model itself.
+There may therefore be details when running the model on the other three datasets where we deviate from the paper.
+We are confident, however, that any such deviations are small.

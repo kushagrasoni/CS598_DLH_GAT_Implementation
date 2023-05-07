@@ -44,7 +44,8 @@
     \input{background-and-problem-statement}
 
     \subsection{Objectives}\label{sec:objectives}
-    Our goal was to reproduce the results reported in the original paper, which used the Cora, Citeseer, Pubmed, and Protein-protein interaction datasets. Specifically, we aimed for:
+    Our goal was to reproduce the results reported in the original paper, which used the Cora, Citeseer, Pubmed, and Protein-protein interaction datasets.
+    Specifically, we aimed for:
     \begin{itemize}
         \item Classification accuracies of approximately 83.0\%, 72.5\%, and 79\% in the Cora, Citeseer, and Pubmed
         datasets, respectively,
@@ -58,7 +59,8 @@
 	\item Not using L2 regularization
 	\item Not using dropout or L2 regularization
     \end{itemize}
-    We hypothesized that one-layer models would perform worse than two-layer models, which would in turn perform worse than three-layer models. We also hypothesized that not using dropout would perform worse than using dropout, that not using L2 regularization would perform worse than using L2 regularization, and that using neither dropout nor L2 regularization would perform worse of all.
+    We hypothesized that one-layer models would perform worse than two-layer models, which would in turn perform worse than three-layer models.
+    We also hypothesized that not using dropout would perform worse than using dropout, that not using L2 regularization would perform worse than using L2 regularization, and that using neither dropout nor L2 regularization would perform worse of all.
 
     \section{Methodology}\label{sec:methodology}
     We tried a total of 5 GAT implementations, four of which were our own, and
@@ -95,24 +97,7 @@
     \input{results}
 
     \section{Discussion}\label{sec:discussion}
-    Our results show that, despite some small details being unclear from the
-    paper, the paper's results can be closely replicated fairly
-    straightforwardly. Having access to an NVIDIA GPU would likely have made
-    it possible to experiment more with the PPI dataset. Having a stronger
-    background in linear algebra would have enabled us to implement the model
-    using Pytorch's primitives more easily, and to optimize the code to make it
-    faster.
-
-    DISCUSS ABLATION RESULTS
-
-    As mentioned previously, the PPI dataset turned out to be sufficiently
-    large to make experimenting with it prohibitively slow, so we were unable
-    to experiment with it as thoroughly as with the other three datasets. We
-    are unsure whether getting our code to run on a GPU would change this.
-
-    \subsection{What was easy}\label{subsec:what-was-easy}
-    \subsection{What was difficult}\label{subsec:what-was-difficult}
-    \subsection{Recommendations for reproducibility}\label{subsec:recommendations}
+    \input{discussion}
 
     \section{Communication with original authors}
     We did not communicate with the paper's authors at all.
