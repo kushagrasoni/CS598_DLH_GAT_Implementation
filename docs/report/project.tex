@@ -61,15 +61,29 @@
     We hypothesized that one-layer models would perform worse than two-layer models, which would in turn perform worse than three-layer models. We also hypothesized that not using dropout would perform worse than using dropout, that not using L2 regularization would perform worse than using L2 regularization, and that using neither dropout nor L2 regularization would perform worse of all.
 
     \section{Methodology}\label{sec:methodology}
-    We tried a total of 5 GAT implementations, four of which were our own. First, we tried using the Pytorch Geometric implementation since we have used this library previously in this course. We then realized this implementation does not provide enough flexibility to accurately reproduce the paper's methodology, so we reimplemented GAT twice using more basic Pytorch Geometric primitives, specifically the GATConv and GATv2Conv classes. GATConv implements part of the original GAT model from our paper, and GATv2Conv is a modified implementation based on a subsequent paper (https://arxiv.org/abs/2105.14491) which claims to have made the attention mechanism used in GAT more powerful. We then tried implementing the GAT model using Pytorch primitives to get a deeper understanding of the model. We first tried following the paper's author's implementation (https://github.com/PetarV-/GAT), but we appear to have made a mistake. Our model improves up to roughly 50% accuracy on the training data using the Cora dataset and then stops improving. We then tried implementing the GAT model again based on the GATLayerImp2 (https://github.com/gordicaleksa/pytorch-GAT/blob/main/models/definitions/GAT.py), but again appear to have made a mistake that stops the model from improving past roughly 45% accuracy on the training data from the Cora dataset.
+    We tried a total of 5 GAT implementations, four of which were our own, and
+    one of which is from the Pytorch Geometric library. One of our
+    implementations was strongly influenced by the paper's authors'
+    implementation (https://github.com/PetarV-/GAT).
 
-    All datasets from the paper are publicly available in multiple locations, including the Pytorch Geometric library. We have been running our experiments locally. Despite the datasets being relatively small, the PPI dataset turned out to be sufficiently large to take a prohibitively long time to run. We therefore do not provide the same amount of results for the PPI dataset as for the other three.
+    All datasets from the paper are publicly available in multiple locations,
+    including the Pytorch Geometric library. We have been running our
+    experiments locally. Despite the datasets being relatively small, the PPI
+    dataset turned out to be sufficiently large to take a prohibitively long
+    time to run. We therefore do not provide the same amount of results for the
+    PPI dataset as for the other three.
 
     \subsection{Model Description}\label{subsec:model-description}
     \input{model-description}
 
     \subsection{Data Description}\label{subsec:data-description}
     \input{data-description}
+
+    \subsection{Hyperparameters}\label{subsec:hyperparameters}
+    There aren't really any hyperparameters to speak of, other than those
+    described in the model description section (the number of layers, L2
+    regularization coefficient, etc.). All hyperparameters were therfore taken
+    directly from the paper.
 
     \subsection{Model Implementation}\label{subsec:model-implementation}
     \input{model-implementation}
@@ -80,8 +94,28 @@
     \section{Results}\label{sec:results}
     \input{results}
 
-    \section{Limitations and Challenges}\label{sec:limitations-and-challenges}
-    As mentioned previously, the PPI dataset turned out to be sufficiently large to make experimenting with it prohibitively slow, so we were unable to experiment with it as thoroughly as with the other three datasets. We are unsure whether getting our code to run on a GPU would change this.
+    \section{Discussion}\label{sec:discussion}
+    Our results show that, despite some small details being unclear from the
+    paper, the paper's results can be closely replicated fairly
+    straightforwardly. Having access to an NVIDIA GPU would likely have made
+    it possible to experiment more with the PPI dataset. Having a stronger
+    background in linear algebra would have enabled us to implement the model
+    using Pytorch's primitives more easily, and to optimize the code to make it
+    faster.
+
+    DISCUSS ABLATION RESULTS
+
+    As mentioned previously, the PPI dataset turned out to be sufficiently
+    large to make experimenting with it prohibitively slow, so we were unable
+    to experiment with it as thoroughly as with the other three datasets. We
+    are unsure whether getting our code to run on a GPU would change this.
+
+    \subsection{What was easy}\label{subsec:what-was-easy}
+    \subsection{What was difficult}\label{subsec:what-was-difficult}
+    \subsection{Recommendations for reproducibility}\label{subsec:recommendations}
+
+    \section{Communication with original authors}
+    We did not communicate with the paper's authors at all.
 
     \bibliographystyle{unsrt} %Reference style.
     \bibliography{references}
