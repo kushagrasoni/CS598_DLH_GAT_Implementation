@@ -17,7 +17,7 @@
 
 \newcommand\BibTeX{B\textsc{ib}\TeX}
 
-\title{Project Draft: Reproduce and Experiment with Graph Attention Networks}
+\title{Spring 2023 CS598 DL4H: Graph Attention Networks Reproducibility Project}
 
 \author
 {Valle-Mena, Ricardo Ruy and Soni, Kushagra \\
@@ -31,13 +31,11 @@
 
 \begin{document}
     \maketitle
-
-    \section{Introduction}\label{sec:introduction}
-
+\section{Introduction}\label{sec:introduction}
     Graph Attention Networks (GATs)~\cite{velickovic2018graph} are a type of neural network architecture designed for
     processing graph-structured data.
     They aim to overcome the limitations of previous architectures by being able to operate on arbitrarily structured graphs in a parallelizable manner.
-    GATs use a masked shared self-attention mechanism to assign weights to each node's neighbors and combine their features, resulting in a new set of features for the node in question.
+    GATs use a shared masked self-attention mechanism to assign weights to each node's neighbors and combine their features, resulting in a new set of features for the node in question.
     GATs have shown promising results in various graph-based tasks, including node classification and link prediction.
 
     \section{Scope of Reproducibility}\label{sec:scope-of-reproducibility}
@@ -52,24 +50,40 @@
         datasets, respectively,
         \item Micro-averaged F1 score of approximately 0.973 in the protein-protein interaction dataset.
     \end{itemize}
-    We hypothesized that our results would be as good or better than those found in previous studies.
 
-    In all four datasets, the results from the paper found were as good or better as the results found in previous studies.
     Furthermore, we conducted the following ablation studies:
     \begin{itemize}
         \item Using one, two, and three layer models for the Citeseer, Cora, and Pubmed datasets
 	\item Not using dropout
 	\item Not using L2 regularization
+	\item Not using dropout or L2 regularization
     \end{itemize}
+    We hypothesized that one-layer models would perform worse than two-layer models, which would in turn perform worse than three-layer models. We also hypothesized that not using dropout would perform worse than using dropout, that not using L2 regularization would perform worse than using L2 regularization, and that using neither dropout nor L2 regularization would perform worse of all.
 
     \section{Methodology}\label{sec:methodology}
-    All datasets from the paper are publicly available in multiple locations, including the Pytorch Geometric library. We have been running our experiments locally. Despite the datasets being relatively small, the PPI dataset turned out to be sufficiently large to take a prohibitively long time to run. We therefore do not provide the same amount of results for the PPI dataset as for the other three.
+    We tried a total of 5 GAT implementations, four of which were our own, and
+    one of which is from the Pytorch Geometric library. One of our
+    implementations was strongly influenced by the paper's authors'
+    implementation (https://github.com/PetarV-/GAT).
+
+    All datasets from the paper are publicly available in multiple locations,
+    including the Pytorch Geometric library. We have been running our
+    experiments locally. Despite the datasets being relatively small, the PPI
+    dataset turned out to be sufficiently large to take a prohibitively long
+    time to run. We therefore do not provide the same amount of results for the
+    PPI dataset as for the other three.
 
     \subsection{Model Description}\label{subsec:model-description}
     \input{model-description}
 
     \subsection{Data Description}\label{subsec:data-description}
     \input{data-description}
+
+    \subsection{Hyperparameters}\label{subsec:hyperparameters}
+    There aren't really any hyperparameters to speak of, other than those
+    described in the model description section (the number of layers, L2
+    regularization coefficient, etc.). All hyperparameters were therfore taken
+    directly from the paper.
 
     \subsection{Model Implementation}\label{subsec:model-implementation}
     \input{model-implementation}
@@ -80,8 +94,28 @@
     \section{Results}\label{sec:results}
     \input{results}
 
-    \section{Limitations and Challenges}\label{sec:limitations-and-challenges}
-    As mentioned previously, the PPI dataset turned out to be sufficiently large to make experimenting with it prohibitively slow, so we were unable to experiment with it as thoroughly as with the other three datasets. We are unsure whether getting our code to run on a GPU would change this.
+    \section{Discussion}\label{sec:discussion}
+    Our results show that, despite some small details being unclear from the
+    paper, the paper's results can be closely replicated fairly
+    straightforwardly. Having access to an NVIDIA GPU would likely have made
+    it possible to experiment more with the PPI dataset. Having a stronger
+    background in linear algebra would have enabled us to implement the model
+    using Pytorch's primitives more easily, and to optimize the code to make it
+    faster.
+
+    DISCUSS ABLATION RESULTS
+
+    As mentioned previously, the PPI dataset turned out to be sufficiently
+    large to make experimenting with it prohibitively slow, so we were unable
+    to experiment with it as thoroughly as with the other three datasets. We
+    are unsure whether getting our code to run on a GPU would change this.
+
+    \subsection{What was easy}\label{subsec:what-was-easy}
+    \subsection{What was difficult}\label{subsec:what-was-difficult}
+    \subsection{Recommendations for reproducibility}\label{subsec:recommendations}
+
+    \section{Communication with original authors}
+    We did not communicate with the paper's authors at all.
 
     \bibliographystyle{unsrt} %Reference style.
     \bibliography{references}
