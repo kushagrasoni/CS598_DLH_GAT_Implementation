@@ -4,7 +4,9 @@ import json
 import pandas as pd
 
 
-from GATConv_Cora import execute_gat_model
+from GAT_Cora import execute_model_cora
+from GAT_Citeseer import execute_model_citeseer
+from GAT_Pubmed import execute_model_pubmed
 
 
 def timer(num_tests, uid, dataset, list_gat_type):
@@ -18,7 +20,12 @@ def timer(num_tests, uid, dataset, list_gat_type):
             print(f"GAT Type {gat_type} ; Iteration {i+1} ; Seed {seed}")
             # start_time = timeit.default_timer()
             # This is the where we call the target function
-            accuracy = execute_gat_model(gat_type, dataset, seed)
+            if dataset == 'cora':
+                accuracy, time_taken = execute_model_cora(gat_type, seed)
+            elif dataset == 'citeseer':
+                accuracy, time_taken = execute_model_citeseer(gat_type, seed)
+            else:
+                accuracy, time_taken = execute_model_pubmed(gat_type, seed)
             # end_time = timeit.default_timer()
             # t = (end_time - start_time)
 
@@ -28,6 +35,7 @@ def timer(num_tests, uid, dataset, list_gat_type):
                 "dataset": dataset,
                 "gat_type": gat_type,
                 "seed": seed,
+                "time_taken": time_taken,
                 "accuracy": float(accuracy)
             }
 

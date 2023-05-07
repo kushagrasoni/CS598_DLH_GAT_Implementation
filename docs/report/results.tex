@@ -1,5 +1,12 @@
-So far we have only been able to inaccurately replicate the paper's
-experiments: as mentioned earlier, the Pytorch Geometric GAT implementation is
+As part of the experimentation, we utilized 3 different open-source GAT model versions:
+\begin{itemize}
+    \item torch\_geometric.nn.GAT
+    \item torch\_geometric.nn.GATConv
+    \item torch\_geometric.nn.GATv2Conv
+\end{itemize}
+
+We were able to closely replicate the paper's
+experiments via 3 different: as mentioned earlier, the Pytorch Geometric GAT implementation is
 not flexible enough to do exactly what the paper does.
 However, our preliminary results are encouraging.
 
@@ -31,8 +38,8 @@ Refer below Table~\ref{tab:results-table}.
     \label{tab:results-table}
 \end{table}
 
-We see signs of overfitting in our experiments and believe that reducing the overfitting will improve our test accuracy further.
-Specifically, on the Citeseer, Cora and Pubmed datasets, the training accuracy reaches 100\%.
-The paper implements an early stopping mechanism during training, presumably to avoid this exact problem.
-Unfortunately, there are no details about how the mechanism works; it is described in a single sentence.
-We will attempt to implement our own such mechanism and hope it will reduce overfitting and improve test accuracy.
+We also implemented early stopping strategy which improved the test accuracy results to some extent.
+
+But, since the above GAT models libraries weren't able to replicate the results 100\% with those in the original paper,
+we tried to write our own GAT model implementation from scratch using torch.nn library.
+Unfortunately, this attempt couldn't go as planned as we

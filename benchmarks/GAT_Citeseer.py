@@ -1,13 +1,15 @@
 import os
+import random
 
 import torch_geometric
 import torch
 import torch.nn.functional as F
 from torch_geometric.datasets import Planetoid
-from torch_geometric.nn import GAT
 from datetime import datetime
 import numpy as np
-import random
+from torch_geometric.nn import GAT
+
+dataset_name = 'citeseer'
 
 def set_seed(seed):
     """Set seed"""
@@ -17,7 +19,7 @@ def set_seed(seed):
     os.environ["PYTHONHASHSEED"] = str(seed)
 
 
-class CoraGATConv(torch.nn.Module):
+class CiteseerGATConv(torch.nn.Module):
     def __init__(self, in_channels, n_classes):
         super().__init__()
         self.conv1 = torch_geometric.nn.GATConv(heads=8, out_channels=8, in_channels=in_channels)
@@ -30,9 +32,9 @@ class CoraGATConv(torch.nn.Module):
         x = self.act1(self.conv1(x, edge_index))
         x = self.act2(self.conv2(x, edge_index))
         return x
-    
-    
-class CoraGATV2Conv(torch.nn.Module):
+
+
+class CiteseerGATV2Conv(torch.nn.Module):
     def __init__(self, in_channels, n_classes):
         super().__init__()
         self.conv1 = torch_geometric.nn.GATv2Conv(heads=8, out_channels=8, in_channels=in_channels)
@@ -47,15 +49,15 @@ class CoraGATV2Conv(torch.nn.Module):
         return x
 
 
-def execute_gat_model(gat_type, dataset_name, seed):
+def execute_model_citeseer(gat_type, seed):
     set_seed(seed)
     start = datetime.now()
     dataset = Planetoid(root=f'../data/{dataset_name}', name=dataset_name)
     # Define model and optimizer
     if gat_type == 'GATConv':
-        model = CoraGATConv(dataset.num_features, dataset.num_classes)
+        model = CiteseerGATConv(dataset.num_features, dataset.num_classes)
     elif gat_type == 'GATv2Conv':
-        model = CoraGATV2Conv(dataset.num_features, dataset.num_classes)
+        model = CiteseerGATV2Conv(dataset.num_features, dataset.num_classes)
     else:
         model = GAT(
             in_channels=dataset.num_features,
@@ -67,7 +69,6 @@ def execute_gat_model(gat_type, dataset_name, seed):
             act='elu',
             act_first=True
         )
-        
     optimizer = torch.optim.Adam(model.parameters(), lr=0.005, weight_decay=5e-4)
 
     best_epoch = 0
@@ -103,13 +104,14 @@ def execute_gat_model(gat_type, dataset_name, seed):
     out = model(dataset.x, dataset.edge_index)
     pred = out.argmax(dim=1)
     acc = pred[dataset.test_mask].eq(dataset.y[dataset.test_mask]).sum().item() / int(dataset.test_mask.sum())
+    time_taken = datetime.now() - start
     print('\n\n*****************************************************************************************************\n')
-    print(f'                                         {dataset} ')
+    print(f'                                         {dataset_name} ')
     print(f'                                         Total Epochs: 200')
     print(f'                                         Test Accuracy: {acc:.4f}')
     print(f'                                         Best Accuracy: {best_acc:.4f}')
     print(f'                                         Best Loss: {best_loss:.4f}')
-    print(f'                                         Time Taken: {datetime.now() - start}')
+    print(f'                                         Time Taken: {time_taken}')
     print('\n*****************************************************************************************************\n\n')
 
-    return f'{acc: .4f}'
+    return f'{acc: .4f}', time_taken

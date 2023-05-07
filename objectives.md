@@ -33,10 +33,10 @@
 2. Report / Presentation / Video
 3. Ablations
 4. Streamline Code repo
-5. Update ReadMe
-6. More ablations
-7. GPU enablement
-8. Anything Extra
+5. PPI Execution on GPU
+6. Update ReadMe
+8. GPU enablement
+9. Anything Extra
 
 
 ##Things We tried but didn't work
