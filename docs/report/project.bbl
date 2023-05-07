@@ -7,11 +7,6 @@ Petar Veli{\v{c}}kovi{\'c}, Guillem Cucurull, Arantxa Casanova, Adriana Romero,
 \newblock In {\em International Conference on Learning Representations (ICLR)},
   2018.
 
-\bibitem{petarvgatgithub}
-Guillem~Cucurull Petar~Veličković.
-\newblock Gat.
-\newblock \url{https://github.com/PetarV-/GAT}, 2018.
-
 \bibitem{sen2008collective}
 Prithviraj Sen, Galileo Namata, Mustafa Bilgic, Lise Getoor, and Brian
   Galligher.

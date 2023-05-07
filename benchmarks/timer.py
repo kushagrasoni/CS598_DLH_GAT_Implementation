@@ -21,11 +21,11 @@ def timer(num_tests, uid, dataset, list_gat_type):
             # start_time = timeit.default_timer()
             # This is the where we call the target function
             if dataset == 'cora':
-                accuracy, time_taken = execute_model_cora(gat_type, seed)
+                accuracy, time_taken, best_accuracy, best_loss = execute_model_cora(gat_type, seed)
             elif dataset == 'citeseer':
-                accuracy, time_taken = execute_model_citeseer(gat_type, seed)
+                accuracy, time_taken, best_accuracy, best_loss = execute_model_citeseer(gat_type, seed)
             else:
-                accuracy, time_taken = execute_model_pubmed(gat_type, seed)
+                accuracy, time_taken, best_accuracy, best_loss = execute_model_pubmed(gat_type, seed)
             # end_time = timeit.default_timer()
             # t = (end_time - start_time)
 
@@ -36,6 +36,8 @@ def timer(num_tests, uid, dataset, list_gat_type):
                 "gat_type": gat_type,
                 "seed": seed,
                 "time_taken": time_taken,
+                "best_accuracy": best_accuracy,
+                "best_loss": best_loss,
                 "accuracy": float(accuracy)
             }
 

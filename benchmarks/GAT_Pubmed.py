@@ -116,4 +116,4 @@ def execute_model_pubmed(gat_type, seed):
     print(f'                                         Time Taken: {time_taken}')
     print('\n*****************************************************************************************************\n\n')
 
-    return f'{acc: .4f}', time_taken
+    return f'{acc: .4f}', time_taken, best_acc, best_loss
