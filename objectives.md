@@ -39,6 +39,7 @@
 9. Anything Extra
 
 
+
 ##Things We tried but didn't work
 
 We tried to use the softmax function in below ways but that made the accuracy worst.

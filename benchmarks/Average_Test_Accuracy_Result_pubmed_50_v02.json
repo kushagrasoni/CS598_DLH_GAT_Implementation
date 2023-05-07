@@ -1,1 +1,6 @@
-{"mean": 0.77726, "min": 0.734, "max": 0.795, "std": 0.011070338748204601, "num_tests": 50, "dataset": "pubmed", "gat_type": "GATv2Conv"}{"mean": 0.77376, "min": 0.732, "max": 0.795, "std": 0.013190238815123868, "num_tests": 50, "dataset": "pubmed", "gat_type": "GATConv"}{"mean": 0.77726, "min": 0.732, "max": 0.797, "std": 0.01224005991270741, "num_tests": 50, "dataset": "pubmed", "gat_type": "GAT"}
+{"mean": 0.77726, "min": 0.734, "max": 0.795, "std": 0.011070338748204601,
+  "num_tests": 50, "dataset": "pubmed", "gat_type": "GATv2Conv"}
+{"mean": 0.77376, "min": 0.732, "max": 0.795, "std": 0.013190238815123868,
+  "num_tests": 50, "dataset": "pubmed", "gat_type": "GATConv"}
+{"mean": 0.77726, "min": 0.732, "max": 0.797, "std": 0.01224005991270741,
+  "num_tests": 50, "dataset": "pubmed", "gat_type": "GAT"}

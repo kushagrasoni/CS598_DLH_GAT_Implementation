@@ -25,16 +25,22 @@ Refer below Table~\ref{tab:results-table}.
     \centering
     \begin{tabular}{@{}llll@{}}
         \toprule
-        \textbf{Dataset} & \textbf{Epochs} & \textbf{Score Type} & \textbf{Results} \\
+        \textbf{Dataset} & \textbf{GAT Type} & \textbf{Mean} & \textbf{Std. Dev.}\\
         \midrule
-        Cora             & 200             & Accuracy            &      {0.82}    \\
-        Citeseer         & 200             & Accuracy            &      {0.73}    \\
-        Pubmed           & 200             & Accuracy            &      {0.79}    \\
-        PPI              & 71              & F1 Score            &      {0.374}   \\
+        Cora             &  {GAT}            &  {78.99}\%      & {1.13}\%             \\
+        Cora             &  {GATConv}        &  {78.86}\%      & {1.15}\%             \\
+        Cora             &  {GATv2Conv}      &  {78.53}\%      & {1.04}\%             \\
+        Citeseer         &  {GAT}            &  {67.01}\%      & {1.43}\%             \\
+        Citeseer         &  {GATConv}        &  {66.83}\%      & {1.41}\%             \\
+        Citeseer         &  {GATv2Conv}      &  {66.65}\%      & {1.47}\%             \\
+        Pubmed           &  {GAT}            &  {77.73}\%      & {1.11}\%             \\
+        Pubmed           &  {GATConv}        &  {77.38}\%      & {1.32}\%             \\
+        Pubmed           &  {GATv2Conv}      &  {77.73}\%      & {1.22}\%             \\
         \bottomrule
 
     \end{tabular}
-    \caption{Results using torch geometric GAT library}
+    \caption{Results using various GAT implementations. Each dataset was executed with each GAT type 50 times
+    and the Mean and Standard deviation results was taken}
     \label{tab:results-table}
 \end{table}
 
