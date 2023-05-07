@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.19)  16 APR 2023 21:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.19)  7 MAY 2023 15:48
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -6,7 +6,7 @@ entering extended mode
 **project.tex
 
 (/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT
-_Implementation/docs/project.tex
+_Implementation/docs/report/project.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24>
 (/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
@@ -153,7 +153,7 @@ runsystem(uname -s > "project.w18")...executed.
 
 
 (/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT
-_Implementation/docs/project.w18)
+_Implementation/docs/report/project.w18)
 runsystem(rm -- "project.w18")...executed.
 
 )
@@ -309,7 +309,7 @@ Package microtype Info: Loading configuration file microtype.cfg.
 File: microtype.cfg 2022/03/14 v3.0d microtype main configuration file (RS)
 ))
 (/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT
-_Implementation/docs/project.sty
+_Implementation/docs/report/project.sty
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
 
@@ -912,7 +912,7 @@ runsystem(rm project.aex)...executed.
 
 
 (/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT
-_Implementation/docs/project.aux)
+_Implementation/docs/report/project.aux)
 \openout1 = `project.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
@@ -995,9 +995,9 @@ LaTeX Info: Redefining \pageref on input line 32.
 LaTeX Info: Redefining \nameref on input line 32.
 
 (/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT
-_Implementation/docs/project.out)
+_Implementation/docs/report/project.out)
 (/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT
-_Implementation/docs/project.out)
+_Implementation/docs/report/project.out)
 \@outlinefile=\write6
 \openout6 = `project.out'.
 
@@ -1038,16 +1038,16 @@ LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              for symbol `textbraceleft' on input line 33.
 
 
-Overfull \vbox (6.54839pt too high) detected at line 33
+Overfull \vbox (8.14833pt too high) detected at line 33
  []
 
 (./background-and-problem-statement.tex)
-Underfull \hbox (badness 1990) in paragraph at lines 52--54
+Underfull \hbox (badness 1990) in paragraph at lines 49--51
 []\OT1/cmr/m/n/10 (+20) Classification ac-cu-ra-cies of ap-prox-i-mately
  []
 
 
-Underfull \hbox (badness 5274) in paragraph at lines 54--55
+Underfull \hbox (badness 5274) in paragraph at lines 51--52
 \OT1/cmr/m/n/10 (+20) 0.973 in the protein-protein in-ter-ac-tion
  []
 
@@ -1056,30 +1056,24 @@ Underfull \hbox (badness 5274) in paragraph at lines 54--55
 
 
 ]
-(./model-description.tex) (./data-description.tex
-Overfull \hbox (16.22008pt too wide) in paragraph at lines 32--42
- [][] 
- []
-
-) (./model-implementation.tex
+(./model-description.tex) (./data-description.tex) (./model-implementation.tex
+[2]
 \openout3 = `project.pyg'.
 
 
 (/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT
-_Implementation/docs/_minted-project/default.pygstyle)
+_Implementation/docs/report/_minted-project/default.pygstyle)
 (/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT
-_Implementation/docs/_minted-project/9123F4C6F6BBF5E2F4669EF49BF7075262F192A755
-D8DDE29DAD74A2F613FCB2.pygtex
+_Implementation/docs/report/_minted-project/9123F4C6F6BBF5E2F4669EF49BF7075262F
+192A755D8DDE29DAD74A2F613FCB2.pygtex
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 2.
- [2])) (./computational-requirements.tex)
+)) (./computational-requirements.tex)
 (./results.tex) [3]
 (/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT
-_Implementation/docs/project.bbl) [4
-
-]
+_Implementation/docs/report/project.bbl) [4]
 (/Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Project/CS598_DLH_GAT
-_Implementation/docs/project.aux)
+_Implementation/docs/report/project.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1090,13 +1084,13 @@ runsystem(rm project.pyg)...executed.
  )
 (\end occurred when \ifx on line 11 was incomplete) 
 Here is how much of TeX's memory you used:
- 29905 strings out of 478268
- 579237 string characters out of 5846347
- 924546 words of memory out of 5000000
- 47445 multiletter control sequences out of 15000+600000
+ 29918 strings out of 478268
+ 579642 string characters out of 5846347
+ 924829 words of memory out of 5000000
+ 47452 multiletter control sequences out of 15000+600000
  483463 words of font info for 131 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,13n,94p,1004b,717s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,94p,1004b,497s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/tex
 mf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf
@@ -1110,10 +1104,11 @@ nts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2022/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2022/texmf-dist/fonts
 /type1/public/cm-super/sfrm1000.pfb>
 Output written on /Users/kushagrasoni/Desktop/Masters/Spring2023/CS598_DLH/Proj
-ect/CS598_DLH_GAT_Implementation/docs/project.pdf (4 pages, 151877 bytes).
+ect/CS598_DLH_GAT_Implementation/docs/report/project.pdf (4 pages, 156189 bytes
+).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
- 28 named destinations out of 1000 (max. 500000)
+ 125 PDF objects out of 1000 (max. 8388607)
+ 98 compressed objects within 1 object stream
+ 34 named destinations out of 1000 (max. 500000)
  28173 words of extra memory for PDF output out of 29859 (max. 10000000)
 

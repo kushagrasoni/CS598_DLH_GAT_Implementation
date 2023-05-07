@@ -1,12 +1,15 @@
 There are several variants of the same model used in the paper.
 
-For the Cora and Citeseer datasets, two-layer GAT models were used.
-The first layer has 8 attention heads, projects the input graph's features to an
+For the Cora and Citeseer datasets, two-layer GAT models were used.  The first
+layer has 8 attention heads, projects the input graph's features to an
 8-dimensional feature space, and uses an exponential linear unit (ELU) as its
-activation function.
-The second layer has a single attention head, projects the data to a C-dimensional feature space, where C is the number of classes in
-the dataset, and uses a softmax activation function.
-L2 regularization is applied with lambda = 0.0005, and droupout is applied with p = 0.6.
+activation function.  The second layer has a single attention head, projects
+the data to a C-dimensional feature space, where C is the number of classes in
+the dataset, and uses a softmax activation function.  L2 regularization is
+applied with lambda = 0.0005, and dropout is applied with p = 0.6.
+
+<TBU>Should we include a more detailed description? Should we explain what each
+attention head does, etc.?
 
 For the Pubmed data, the architecture is mostly the same. However, the second
 layer has 8 attention heads like the first layer, and the L2 regularization
@@ -18,3 +21,5 @@ first two layers have 4 attention heads, project their input data to a
 layer has 6 attention heads, projects its input data to a 121-dimensional
 feature space, averages all 121 dimensions, and applies a softmax activation
 function.
+
+<TBU>Talk about "learning objective" and number of parameters (from overleaf doc)

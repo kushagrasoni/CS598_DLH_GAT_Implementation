@@ -1,0 +1,4 @@
+dataset,gat_type,seed,time_taken,accuracy
+cora,GATv2Conv,24324,0 days 00:00:29.346196,0.763
+cora,GATConv,22000,0 days 00:00:21.904385,0.808
+cora,GAT,46839,0 days 00:00:15.566023,0.795

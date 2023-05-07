@@ -24,6 +24,10 @@ William~L. Hamilton, Rex Ying, and Jure Leskovec.
 \newblock In {\em Advances in Neural Information Processing Systems (NeurIPS)},
   2017.
 
+\bibitem{pytorchgeometric}
+Matthias Fey and Jan~E. Lenssen.
+\newblock Pytorch geometric documentation, 2021.
+
 \bibitem{paszke2019pytorch}
 Adam Paszke, Sam Gross, Soumith Chintala, Gregory Chanan, Edward Yang, Zachary
   DeVito, Zeming Lin, Alban Desmaison, Luca Antiga, and Adam Lerer.

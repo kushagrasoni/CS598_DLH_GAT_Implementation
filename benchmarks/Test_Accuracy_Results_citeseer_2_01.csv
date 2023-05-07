@@ -1,0 +1,7 @@
+dataset,gat_type,seed,accuracy
+citeseer,GATv2Conv,84909,0.638
+citeseer,GATv2Conv,503,0.675
+citeseer,GATConv,22408,0.651
+citeseer,GATConv,38852,0.689
+citeseer,GAT,66170,0.671
+citeseer,GAT,8825,0.662

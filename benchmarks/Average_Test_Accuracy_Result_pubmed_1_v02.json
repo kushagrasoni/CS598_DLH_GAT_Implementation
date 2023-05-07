@@ -1,0 +1,1 @@
+{"mean": 0.778, "min": 0.778, "max": 0.778, "std": 0.0, "num_tests": 1, "dataset": "pubmed", "gat_type": "GATv2Conv"}{"mean": 0.771, "min": 0.764, "max": 0.778, "std": 0.007000000000000006, "num_tests": 1, "dataset": "pubmed", "gat_type": "GATConv"}{"mean": 0.777, "min": 0.764, "max": 0.789, "std": 0.010230672835481881, "num_tests": 1, "dataset": "pubmed", "gat_type": "GAT"}

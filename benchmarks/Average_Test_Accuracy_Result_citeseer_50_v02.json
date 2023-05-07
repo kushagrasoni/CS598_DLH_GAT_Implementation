@@ -1,0 +1,6 @@
+{"mean": 0.6664599999999998, "min": 0.622, "max": 0.695, "std": 0.014693141257062763,
+  "num_tests": 50, "dataset": "citeseer", "gat_type": "GATv2Conv"}
+{"mean": 0.6683, "min": 0.622, "max": 0.702, "std": 0.014103545653487277,
+  "num_tests": 50, "dataset": "citeseer", "gat_type": "GATConv"}
+{"mean": 0.6701133333333334, "min": 0.622, "max": 0.702, "std": 0.014305959907985506,
+  "num_tests": 50, "dataset": "citeseer", "gat_type": "GAT"}

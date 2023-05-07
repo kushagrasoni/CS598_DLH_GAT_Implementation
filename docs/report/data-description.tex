@@ -1,0 +1,58 @@
+We used the same datasets as in the GAT paper: Cora, Citeseer, Pubmed, and
+Protein-Protein Interaction (PPI). The Cora, Citeseer and Pubmed datasets were
+originally introduced in~\cite{sen2008collective} and the PPI dataset was
+introduced in~\cite{hamilton2017inductive}.
+
+Table~\ref{tab:dataset_stats} summarizes the basic statistics of the four
+datasets. Note that the number of features is different for each dataset, as
+is the number of classes and the sparsity of the adjacency matrix.
+
+We used the same dataset splits and evaluation metrics as in the original
+paper. The data and splits are readily available through the Planetoid and PPI
+classes from Pytorch Geometric~\cite{pytorchgeometric}.
+
+\subsubsection{Cora}
+The Cora dataset consists of 2,708 scientific publications classified into one
+of seven categories. The citations between publications form a graph, where
+each node represents a publication and each edge represents a citation.
+
+\subsubsection{Citeseer}
+The Citeseer dataset consists of 3,327 scientific publications classified into
+one of six categories. Similarly, the citations between publications form a
+graph.
+
+\subsubsection{Pubmed}
+The Pubmed dataset consists of 19,717 scientific publications from the PubMed
+database, where each publication is associated with one or more MeSH (Medical
+Subject Headings) terms. The graph is constructed using the citation links
+between publications and each node represents a publication. The task is to
+predict the MeSH terms associated with each publication.
+
+\subsubsection{PPI}
+In the PPI dataset, there are multiple graphs, where each graph represents a
+tissue and each node in the graph represents a protein. The goal of the task
+is to predict the biological function labels of the proteins in a previously
+unseen tissue graph. There are 121 possible labels that a protein node can
+have, and the task is to predict all of the labels for each protein node in the
+test graphs. The dataset is divided into 20 training graphs, 2 validation
+graphs, and 2 test graphs.
+
+\begin{table}
+    \centering
+    \begin{tabular}{@{}llllll@{}}
+        \toprule
+        \textbf{Dataset}&\textbf{Nodes}&\textbf{Edges}&\textbf{F/N}&\textbf{Classes}\\
+        \midrule
+        Cora     & 2,708   & 5,429   & 1,433 & 7 \\
+        Citeseer & 3,327   & 4,732   & 3,703 & 6 \\
+        Pubmed   & 19,717  & 44,338  & 500   & 3 \\
+        PPI      & 56,944  & 818,716 & 50    & 20 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Dataset statistics; F/N represents Features/Node}
+    \label{tab:dataset_stats}
+
+\end{table}
+
+
+
