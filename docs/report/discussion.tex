@@ -6,7 +6,19 @@ background in linear algebra would have enabled us to implement the model
 using Pytorch's primitives more easily, and to optimize the code to make it
 faster.
 
-DISCUSS ABLATION RESULTS
+Our ablation results are somewhat surprising. Both single-layer models
+performed worse than the architectures used in the paper, which is not
+surprising, but one of the single-layer models appears to have performed
+better than the other, which is somewhat surprising. The only difference
+between the two is that the second used two activation functions: the
+exponential linear unit followed by softmax. The first, on the other hand, used
+only softmax.
+
+The three-layer model performed better than the single-layer models, which is
+unsurprising, but it did not appear to perform better than the two-layer models
+from the paper, which is somewhat surprising. This perhaps suggests that tuning
+the hyperparameters of the model is just as important as adding more parameters
+via an extra layer.
 
 As mentioned previously, the PPI dataset turned out to be sufficiently
 large to make experimenting with it prohibitively slow, so we were unable
@@ -14,33 +26,30 @@ to experiment with it as thoroughly as with the other three datasets. We
 are unsure whether getting our code to run on a GPU would change this.
 
 \subsection{What was easy}\label{subsec:what-was-easy}
-There were couple of tasks which took less efforts than the others:
+There were a few tasks which took less effort than the others:
 \begin{itemize}
-    \item Reading and understand the purpose of the paper was easy. Most of the important sections
-    namely, layers' structure, early stopping, implementation parameters, were explained nicely.
+    \item Reading and understand the purpose of the paper was easy. Most of the important sections,
+    namely the layer structure, the early stopping mechanism, and the models parameters, were explained nicely.
     \item Finding and accessing the datasets was easy and was made easier by torch\_geometirc's Planetoid library.
-    \item Utilizing the packaged open-source GAT library to training and test the various datasets was easy.
+    \item Utilizing the packaged open-source GAT library to train and test the various datasets was easy.
     All it requires is providing the exact same input parameters which were used by the original authors.
 \end{itemize}
 
 
 \subsection{What was difficult}\label{subsec:what-was-difficult}
 \begin{itemize}
-    \item Complex architecture: Understanding the architecture was definitely one of the most difficult task, let alone implement it.
+    \item Complex architecture: Understanding the architecture was definitely one of the most difficult tasks, let alone implement it.
     The GAT model has a complex architecture, involving multiple layers and attention mechanisms, which was difficult to
     implement.
     \item Memory constraints: The GAT model can require a large amount of memory,
     particularly when processing large graphs or using large batch sizes like that of PPI, which can make it challenging
     to train on standard hardware.
-    \item GAT implementation using pytorch: Implementing the GAT using pytorch was specifically difficult when it
-    comes to replicate the results in the original paper. TBU
+    \item GAT implementation using Pytorch: Implementing GAT using Pytorch was especially difficult. It is easy to make subtle mistakes while wiring up the various parts of the model in Pytorch, and it is difficult to debug what is happening since the heavy lifting in Pytorch happens in C++ rather than Python, which makes it impossible to step through in Python debugger.
+
 \end{itemize}
 \subsection{Recommendations for reproducibility}\label{subsec:recommendations}
 \begin{itemize}
-    \item Owning an NVIDIA GPU and running the models might help in running the datasets with large number of graph
-    nodes.
-    \item Better understanding of linear algebra will come a long way in understanding the complexity of the paper and
-    being able to look at the equations in the paper and optimize them.
-    \item Better debugging techniques for models and code might help a lot in saving time when trying to figure out
-    issues in the implemented models.
+    \item Owning an NVIDIA GPU and running the models on the GPU might help to train the models faster and to be able to handle larger datasets.
+    \item Having a solid understanding of linear algebra is very important. It will help understand the model quickly, it will help translate the math behind the paper into code, and it will help to optimize the operations of the model.
+    \item Knowing good debugging techniques and having experience debugging neural network models is tremendously valuable.
 \end{itemize}

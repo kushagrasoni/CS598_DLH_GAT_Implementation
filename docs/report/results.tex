@@ -9,17 +9,26 @@ provide, but found it was not flexible enough to properly replicate the model
 architectures used in the paper. We then implemented two versions of GAT, using
 Pytorch Geometric's GATConv and GATv2Conv classes. The former is an
 implementation of a single GAT layer, and the latter is an implementation of
-a single layer from a subsequent paper (https://arxiv.org/abs/2105.14491),
+a single layer from a subsequent paper~\cite{velivckovic2021attentive},
 which claims to have made the attention mechanism more powerful.
 
+\subsection{Results: Citeseer, Cora and Pubmed}\label{subsec:results:-citeseer-cora-and-pubmed}
 We ran all three of these models on the Cora, Citeseer and Pubmed datasets 50
-times. Each run consisted in 200 epochs of training. The results are shown in
-<TBU> REFERENCE TO BENCHMARKING IMAGE. As we can see, our Cora and Pubmed
-results are slightly worse than the Cora and Pubmed results from the paper. In
-the case of Pubmed, our results are quite a bit worse, with our best runs being
-a little bit worse than the average from the paper, and our worse results being
-a lot worse.
+times. Each run consisted in 200 epochs of training. The results are shown in Figure~\ref{fig:benchmarks}.
 
+\begin{figure*}
+    \includegraphics[width=\textwidth, height=9cm]{images/Benchmarking_Result_Graph}
+    \caption{Benchmarking Results for various datasets for every GAT types used. Each dataset was executed for 50
+    iterations, where each iteration consisted of 200 training epochs}
+    \label{fig:benchmarks}
+\end{figure*}
+As we can see, from comparing Table~\ref{tab:results-table} with the results from the paper,
+our Cora and Citeseer results are slightly worse than the Cora and Citeseer results from the paper.
+In the case of Pubmed, our results are quite a bit worse, with our best runs being
+a little worse than the average from the paper, and our worse results being
+a lot worse as seen in Figure~\ref{fig:benchmarks}.
+
+\subsection{Results: PPI}\label{subsec:results:-ppi}
 Training the model on the PPI data has proven to be significantly slower than
 on the other datasets. We only ran the PPI data through the implementation
 using the Pytorch Geometric GAT class, and ended up discarding our results
@@ -52,6 +61,7 @@ memory when we tried to run it on another machine.
     \label{tab:results-table}
 \end{table}
 
+\subsection{Results: Pytorch implementation}\label{subsec:results:-pytorch-implementation}
 We also tried writing our own implementation of the GAT model using Pytorch
 primitives. The idea was to gain a deeper understanding of the model and to be
 able to experiment more flexibly with the model, since we can control
@@ -60,17 +70,33 @@ there are aspects of the model that we can't control when using Pytorch
 Geometric's classes.
 
 Unfortunately, both our attempts are rewriting GAT using Pytorch failed. We
-first tried to translate the implementation written by the paper's authors
-(<TBU>Add reference to PetarV repo here) from Tensorflow to Pytorch, but its
-accuracy stopped increasing on the training data at roughly 50% accuracy. This
+first tried to translate the implementation written by the paper's authors~\cite{petarvgatgithub} from Tensorflow to Pytorch, but its
+accuracy stopped increasing on the training data at roughly 50\% accuracy. This
 is in stark contrast to the previously-discussed implementations which achieved
-well over 80% accuracy on the training data.
+well over 80\% accuracy on the training data.
 
-We then used another Pytorch implementation we found online (<TBU>Add reference
-to GATLayerImp2 from pytorch-GAT repo here) as a reference for another Pytorch
-GAT implementation. Similarly to the previous attempt, training accuracy
-stopped increasing around 45% accuracy.
+We then used~\href{https://github.com/gordicaleksa/pytorch-GAT/blob/main/models/definitions/GAT
+.py#L349}{\textit{another Pytorch implementation we found online}} as a reference for another Pytorch
+GAT implementation.
+Similarly to the previous attempt, training accuracy stopped increasing around 45\% accuracy.
 
+\subsection{Ablation Results}\label{subsec:ablation-results}
 Lastly, we ran the Cora, Citeseer and Pubmed datasets through three
 architectural variants of the model. In two cases, we wrote single-layer
 GAT implementations, and the other was a three-layer GAT implementation.
+The results for all the ablations are shown in the Table~\ref{tab:ablation-results}.
+\begin{table}
+    \centering
+    \begin{tabular}{@{}llll@{}}
+        \toprule
+        \textbf{Model Type}     & \textbf{Dataset}   & \textbf{Accuracy}\\
+        \midrule
+        Single Layer GAT (v1)   &  {Cora}            &  {73.20}\%    \\
+        Single Layer GAT (v2)   &  {Citeseer}        &  {62.70}\%    \\
+        Three Layer GAT         &  {Pubmed}          &  {70.40}\%    \\
+        \bottomrule
+
+    \end{tabular}
+    \caption{Results for various ablations in the GAT implementation.}
+    \label{tab:ablation-results}
+\end{table}
