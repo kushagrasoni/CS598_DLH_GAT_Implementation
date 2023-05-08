@@ -41,7 +41,7 @@ class GATHead(torch.nn.Module):
 
         return ret
 
-class GATLayer(torch.nn.Module):
+class GATLayer1(torch.nn.Module):
     def __init__(self, in_dim, out_dim, n_heads, bias, in_drop, coef_drop, residual, concat):
         super().__init__()
         self.heads = torch.nn.ParameterList([GATHead(in_dim, out_dim, bias, in_drop, coef_drop, residual) for i in range(n_heads)])
@@ -56,8 +56,8 @@ class GATLayer(torch.nn.Module):
 class GAT(torch.nn.Module):
     def __init__(self, n_features, n_classes, bias):
         super().__init__()
-        self.conv1 = GATLayer(n_features, 8, 8, bias, .6, .6, False, True)
-        self.conv2 = GATLayer(64, n_classes, 1, bias, .6, .6, False, False)
+        self.conv1 = GATLayer1(n_features, 8, 8, bias, .6, .6, False, True)
+        self.conv2 = GATLayer1(64, n_classes, 1, bias, .6, .6, False, False)
 
     def forward(self, x):
         x = torch.nn.functional.elu(self.conv1(x))
@@ -85,7 +85,7 @@ def planetoid_adj_to_petarv_adj(adj):
         petarv_adj[row[0], row[1]] = 1
     return petarv_adj
 
-class GATLayer(torch.nn.Module):
+class GATLayer2(torch.nn.Module):
     def __init__(self, in_dim, out_dim, n_heads, dropout, concat=True):
         super().__init__()
         self.in_dim = in_dim
@@ -119,9 +119,9 @@ class GATLayer(torch.nn.Module):
 class GATCora(torch.nn.Module):
     def __init__(self, n_features, n_classes):
         super().__init__()
-        self.layer1 = GATLayer(n_features, 8, 8, .6, True)
+        self.layer1 = GATLayer2(n_features, 8, 8, .6, True)
         self.elu = torch.nn.ELU()
-        self.layer2 = GATLayer(64, n_classes, 1, .6, False)
+        self.layer2 = GATLayer2(64, n_classes, 1, .6, False)
         self.softmax = torch.nn.Softmax(dim=-1)
 
     def forward(self, x, connectivity):
