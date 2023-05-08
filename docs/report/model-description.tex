@@ -1,6 +1,6 @@
 \subsubsection{Architecture}
 There are several variants of the same model used in the paper.
-For the Cora and Citeseer datasets, two-layer GAT models were used.  The first
+For the Cora and Citeseer datasets, two-layer GAT models were used. The first
 layer has 8 attention heads, projects the input graph's features to an
 8-dimensional feature space, and uses an exponential linear unit (ELU) as its
 activation function. The second layer has a single attention head, projects
@@ -19,14 +19,13 @@ layer has 6 attention heads, projects its input data to a 121-dimensional
 feature space, averages all 121 dimensions, and applies a softmax activation
 function.
 
-While training the model for various datasets we employed early stopping strategy similar to the one used in th
-original paper, with a patience of 100 epochs.
+We employed the same early stopping strategy employed by the paper's authors,
+with a patience of 100 epochs, during all training.
 
 \subsubsection{Learning Objectives}
-The learning objectives for various datasets used are as follows:
+The learning objectives for the datasets are as follows:
 \begin{itemize}
-    \item Cora: To classify academic papers into one of seven classes based on their content, using citation links
-    between the papers as input.
+    \item Cora: To classify academic papers into one of seven classes based on their content and the citations between papers.
     \item Citeseer: Given a graph where nodes represent research papers and edges represent citation links between
     papers, the model is trained to predict the subject area of each paper based on its citation links and the text
     of its title and abstract.
@@ -36,5 +35,5 @@ The learning objectives for various datasets used are as follows:
     \item Pubmed: The goal is to predict the category of a scientific publication based on the citation network of papers.
     There are three possible categories: diabetes mellitus, cardiovascular diseases, and neoplasms
     \item PPI: Given a graph where nodes represent proteins and edges represent interactions between proteins,
-    the task is to predict which proteins interact with each other.
+    the task is to predict whether proteins have each of 121 possible characteristics.
 \end{itemize}
