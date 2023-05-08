@@ -38,9 +38,7 @@ under `/code/workspace`
 including the Pytorch Geometric library. We have been running our
 experiments locally. 
 * Despite the datasets being relatively small, the PPI dataset turned out to be sufficiently large to take a prohibitively long
-time to run.  
-* We therefore do not provide the same amount of results for the
-PPI dataset as for the other three.
+time to run. We therefore ended up not having any results for the PPI dataset.
 
 ### Results & Benchmarkings
 

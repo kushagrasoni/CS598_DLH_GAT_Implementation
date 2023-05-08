@@ -44,7 +44,7 @@ There were a few tasks which took less effort than the others:
     \item Memory constraints: The GAT model can require a large amount of memory,
     particularly when processing large graphs or using large batch sizes like that of PPI, which can make it challenging
     to train on standard hardware.
-    \item GAT implementation using Pytorch: Implementing GAT using Pytorch was especially difficult. It is easy to make subtle mistakes while wiring up the various parts of the model in Pytorch, and it is difficult to debug what is happening since the heavy lifting in Pytorch happens in C++ rather than Python, which makes it impossible to step through in Python debugger.
+    \item GAT implementation using Pytorch: Implementing the GAT using Pytorch was especially difficult. It easy to make subtle mistakes while wiring up the various parts of the model in Pytorch, and it is difficult to debug what is happening since the heavy lifting in Pytorch happens in C++ rather than Python, which makes it impossible to step through in Python debugger.
 
 \end{itemize}
 \subsection{Recommendations for reproducibility}\label{subsec:recommendations}
