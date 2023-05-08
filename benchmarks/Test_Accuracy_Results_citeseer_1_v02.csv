@@ -1,8 +1,0 @@
-dataset,gat_type,seed,time_taken,accuracy
-citeseer,GATv2Conv,45429,0 days 00:01:04.668340,0.648
-citeseer,GATConv,22704,0 days 00:00:46.747283,0.669
-citeseer,GAT,11718,0 days 00:00:23.684816,0.67
-dataset,gat_type,seed,time_taken,best_accuracy,best_loss,accuracy
-citeseer,GATv2Conv,32067,0 days 00:01:04.285104,1.0,1.0463175773620605,0.673
-citeseer,GATConv,32389,0 days 00:00:47.459658,1.0,1.0471242666244507,0.674
-citeseer,GAT,28287,0 days 00:00:23.441452,1.0,0.26111406087875366,0.674

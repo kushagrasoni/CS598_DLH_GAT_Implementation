@@ -1,4 +1,0 @@
-dataset,gat_type,seed,time_taken,accuracy
-pubmed,GATv2Conv,99406,0 days 00:02:29.231969,0.778
-pubmed,GATConv,94460,0 days 00:01:58.636878,0.764
-pubmed,GAT,50220,0 days 00:01:05.225895,0.789
