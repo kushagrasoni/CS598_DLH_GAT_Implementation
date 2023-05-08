@@ -25,7 +25,7 @@
     \\[2em]
     Group ID: 179\\
     Paper ID: 7\\
-    Presentation link: \url{https://www.youtube.com} \\
+    Presentation link: \url{https://youtu.be/OLJBoOzjBHg} \\
     Code link: \url{https://github.com/kushagrasoni/CS598_DLH_GAT_Implementation}
     \\[2em]
 }
@@ -53,15 +53,10 @@
         \item Micro-averaged F1 score of approximately 0.973 in the protein-protein interaction dataset.
     \end{itemize}
 
-    Furthermore, we conducted the following ablation studies:
-    \begin{itemize}
-        \item Using one, two, and three layer models for the Citeseer, Cora, and Pubmed datasets
-	\item Not using dropout
-	\item Not using L2 regularization
-	\item Not using dropout or L2 regularization
-    \end{itemize}
-    We hypothesized that one-layer models would perform worse than two-layer models, which would in turn perform worse than three-layer models.
-    We also hypothesized that not using dropout would perform worse than using dropout, that not using L2 regularization would perform worse than using L2 regularization, and that using neither dropout nor L2 regularization would perform worse of all.
+    Furthermore, we trained two one-layer GAT models and a three-layer GAT
+    model on the Cora, Citeseer and Pubmed datasets as ablation studies.  We
+    hypothesized that one-layer models would perform worse than two-layer
+    models, which would in turn perform worse than three-layer models.
 
     \section{Methodology}\label{sec:methodology}
     We tried a total of 5 GAT implementations, four of which were our own, and
@@ -73,8 +68,8 @@
     including the Pytorch Geometric library. We have been running our
     experiments locally. Despite the datasets being relatively small, the PPI
     dataset turned out to be sufficiently large to take a prohibitively long
-    time to run. We therefore do not provide the same amount of results for the
-    PPI dataset as for the other three.
+    time to run. We therefore ended up not having results to present for the
+    PPI data.
 
     \subsection{Model Description}\label{subsec:model-description}
     \input{model-description}
