@@ -28,7 +28,8 @@ using the Jupyter Notebook.
 * Navigate to the `/code` directory of the cloned project
 * Open the `jupyter notebook` named `GAT_Implementation_Notebook.ipynb`.
 
-NOTE: We have also kept all the draft and workspace code implementation for 3 datasets in separate Notebooks
+NOTE: We have also kept all the individual workspace code implementation for 3 datasets, from-scratch GAT 
+implementation of pytorch and Ablations in separate Notebooks
 under `/code/workspace`
 
 ### Model Implementation and Description
